@@ -46,13 +46,13 @@ final class Percolation {
         if (row == n - 1) {
             wqu.union(component(row, col), ((n * n) + 1));
         }
-        if (row > 0 && grid[row - 1][col] == 1) {
+        if (row > 1 && grid[row - 1][col] == 1) {
             wqu.union(component(row, col), component(row + 1, col));
         }
         if (row < n - 1 && grid[row + 1][col] == 1) {
             wqu.union(component(row, col), component(row - 1, col));
         }
-        if (col > 0 && grid[row][col -1] == 1) {
+        if (col > 1 && grid[row][col -1] == 1) {
             wqu.union(component(row, col), component(row, col + 1));
         }
         if (col < n - 1 && grid[row][col + 1] == 1) {
@@ -68,7 +68,7 @@ final class Percolation {
      * @return     { returns int value }
      */
     public int component(final int a, final int b) {
-        return ((a * n) + b) + 1;
+        return ((a * n) + b);
     }
     /**
      * Determines if open.
