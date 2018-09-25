@@ -24,10 +24,10 @@ final class Percolation {
      * @param      n     { The n }
      */
     Percolation(int n) {
+        this.n = n;
         grid = new int[n][n];
         countOpenSites = 0;
         wqu = new WeightedQuickUnionUF((n * n) + 2);
-        n = n;
     }
     /**
      * { function to make the grid open }.
