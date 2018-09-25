@@ -26,7 +26,7 @@ final class Percolation {
     Percolation(int n) {
         grid = new int[n][n];
         countOpenSites = 0;
-        wqu = new WeightedQuickUnionUF((n*n) + 2);
+        wqu = new WeightedQuickUnionUF((n * n) + 2);
         n = n;
     }
     /**
@@ -44,18 +44,18 @@ final class Percolation {
             wqu.union(0, component(row, col));
         }
         if (row == n - 1) {
-            wqu.union(((n*n) + 1), component(row, col));
+            wqu.union(component(row, col), ((n * n) + 1));
         }
-        if (row > 0) {
+        if (row > 0 && grid[row - 1][col] == 1) {
             wqu.union(component(row, col), component(row + 1, col));
         }
-        if (row <= n - 1) {
+        if (row <= n - 1 && grid[row + 1][col] == 1) {
             wqu.union(component(row, col), component(row - 1, col));
         }
-        if (col > 0) {
+        if (col > 0 && grid[row][col -1] == 1) {
             wqu.union(component(row, col), component(row, col + 1));
         }
-        if (col <= n - 1) {
+        if (col <= n - 1 && grid[row][col + 1] == 1) {
             wqu.union(component(row, col), component(row, col - 1));
         }
     }
@@ -112,7 +112,7 @@ final class Percolation {
      * @return     { returns true or false }
      */
     public boolean percolates() {
-        return wqu.connected(0, ((n*n) + 1));
+        return wqu.connected(0, ((n * n) + 1));
     }
 }
 /**
