@@ -64,7 +64,7 @@ class Percolation {
 		return countOpenSites;
 	}
 	public boolean percolates() {
-		return wqu.connected(0, (n*n) + 1);
+		return wqu.connected(0, ((n*n) + 1));
 	}
 }
 public class Solution {
