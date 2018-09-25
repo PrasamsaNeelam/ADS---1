@@ -4,6 +4,9 @@ import java.util.Scanner;
  * Class for solution.
  */
 public final class Solution {
+    Solution() {
+        
+    }
     /**
      * { main function to drive the program }.
      *
