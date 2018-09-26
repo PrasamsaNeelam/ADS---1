@@ -53,7 +53,7 @@ public final class Solution {
                     arr3[k] = arr2[j];
                     j++;
                     k++;
-                } 
+                }
             } else {
                 break;
             }
@@ -62,7 +62,7 @@ public final class Solution {
                 while (i < size1) {
                     arr3[k] = arr1[i];
                     i++;
-                    k++; 
+                    k++;
                 }
             }
             if (j < size2) {
