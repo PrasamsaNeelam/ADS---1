@@ -6,8 +6,8 @@ public class Solution {
 	}
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		int size1 = s.nextInt();
-		int size2 = s.nextInt();
+		int size1 = Integer.parseInt(s.nextLine());
+		int size2 = Integer.parseInt(s.nextLine());
 		int[] arr1 = new int[size1];
 		int[] arr2 = new int[size2];
 		String[] str1 = s.nextLine().split(",");
