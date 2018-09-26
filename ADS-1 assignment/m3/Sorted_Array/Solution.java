@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 public class Solution {
 	private Solution() {
 
@@ -23,7 +22,7 @@ public class Solution {
 		int k = 0;
 		int[] arr3 = new int[size1 + size2];
 		while (k < size1 + size2) {
-			if (i < size1 && j < size2) {
+			if ((i < size1) && (j < size2)) {
 				if (arr1[i] < arr2[j]) {
 					arr3[k] = arr1[i];
 					i++;
@@ -39,8 +38,11 @@ public class Solution {
 					arr3[k] = arr2[j];
 					j++;
 					k++;
-				}
+				} 
+			} else {
+				break;
 			}
+		}
 			if (i < size1) {
 				while (i < size1) {
 					arr3[k] = arr1[i];
@@ -55,7 +57,6 @@ public class Solution {
 					k++;
 				}
 			}
-		}
 		for (int x = 0; x < arr3.length - 1; x++) {
 			System.out.print(arr3[x] + ",");
 		}
