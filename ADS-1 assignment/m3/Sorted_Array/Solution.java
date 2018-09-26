@@ -19,8 +19,48 @@ public class Solution {
 		for (int i = 0; i < size2; i++) {
 			arr2[i] = Integer.parseInt(str2[i]);
 		}
-		// System.out.println(str1);
-		// System.out.println(str2);
+		int i = 0;
+		int j = 0;
+		int k = 0;
+		int[] arr3 = new int[size1 + size2];
+		while (k < size1 + size2) {
+			if (i < size1 && j < size2) {
+				if (arr1[i] < arr2[j]) {
+					arr3[k] = arr1[i];
+					i++;
+					k++;
+				} else if (arr1[i] > arr2[j]) {
+					arr3[k] = arr2[j];
+					j++;
+					k++;
+				} else {
+					arr3[k] = arr1[i];
+					i++;
+					k++;
+					arr3[k] = arr2[j];
+					j++;
+					k++;
+				}
+			}
+			if (i < size1) {
+				while (i < size1) {
+					arr3[k] = arr1[i];
+					i++;
+					k++; 
+				}
+			}
+			if (j < size2) {
+				while (j < size2) {
+					arr3[k] = arr2[j];
+					j++;
+					k++;
+				}
+			}
+		}
+		for (int x = 0; x < arr3.length - 1; x++) {
+			System.out.println(arr3[x] + ",");
+		}
+		System.out.println(arr3[arr3.length - 1]);
 	}
 }
 	
