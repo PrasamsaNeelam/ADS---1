@@ -12,7 +12,6 @@ public class Solution {
 		int[] arr2 = new int[size2];
 		String[] str1 = s.nextLine().split(",");
 		String[] str2 = s.nextLine().split(",");
-		System.out.println(Arrays.toString(str1));
 		for (int i = 0; i < size1; i++) {
 			arr1[i] = Integer.parseInt(str1[i]);
 		}
@@ -58,7 +57,7 @@ public class Solution {
 			}
 		}
 		for (int x = 0; x < arr3.length - 1; x++) {
-			System.out.println(arr3[x] + ",");
+			System.out.print(arr3[x] + ",");
 		}
 		System.out.println(arr3[arr3.length - 1]);
 	}
