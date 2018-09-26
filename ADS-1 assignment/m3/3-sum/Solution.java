@@ -12,7 +12,7 @@ public class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
 
     }
     /**
@@ -42,7 +42,7 @@ public class Solution {
         System.out.println(cnt);
     }
     /**
-     * { binary search function }
+     * { binary search function }.
      *
      * @param      arr         The arr
      * @param      startIndex  The start index
@@ -51,7 +51,8 @@ public class Solution {
      *
      * @return     { returns int value }
      */
-    static int binarySearch(final int[] arr, final int startIndex, final int endIndex, final int x) {
+    static int binarySearch(final int[] arr, final int startIndex,
+        final int endIndex, final int x) {
         if (endIndex >= startIndex) {
             int mid = startIndex + (endIndex - startIndex) / 2;
             if (arr[mid] == x) {
