@@ -8,14 +8,19 @@ import java.util.Arrays;
 /**
  * Class for solution.
  */
-class Solution {
+public class Solution {
     /**
      * Constructs the object.
      */
     Solution() {
 
     }
-    public static void main(String[] args) {
+    /**
+     * { main function to read the input and initialize the array }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int size = s.nextInt();
 
@@ -36,7 +41,17 @@ class Solution {
         }
         System.out.println(cnt);
     }
-    static int binarySearch(int[] arr, int startIndex, int endIndex, int x) {
+    /**
+     * { binary search function }
+     *
+     * @param      arr         The arr
+     * @param      startIndex  The start index
+     * @param      endIndex    The end index
+     * @param      x           { Search element }
+     *
+     * @return     { returns int value }
+     */
+    static int binarySearch(final int[] arr, final int startIndex, final int endIndex, final int x) {
         if (endIndex >= startIndex) {
             int mid = startIndex + (endIndex - startIndex) / 2;
             if (arr[mid] == x) {
