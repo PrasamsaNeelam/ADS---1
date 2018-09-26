@@ -8,7 +8,7 @@ import java.util.Arrays;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -66,3 +66,4 @@ public class Solution {
         return -1;
     }
 }
+
