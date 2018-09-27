@@ -3,7 +3,13 @@ import java.util.Scanner;
  * Class for node.
  */
 class Node {
+	/**
+	 * { String data }.
+	 */
     String data;
+    /**
+     * { Node next }.
+     */
     Node next;
 }
 
