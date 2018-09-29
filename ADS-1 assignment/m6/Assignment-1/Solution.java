@@ -57,6 +57,10 @@ class Stack {
 		ll.insert(item);
 	}
 	String pop() {
+		if (isEmpty()) {
+			System.out.println("Stack is empty");
+			return null;
+		}
 		return ll.delete();
 	}
 	boolean isEmpty() {
@@ -72,16 +76,16 @@ class AddLargeNumbers {
 	public static LinkedList numberToDigits(String number) {
 		LinkedList obj = new LinkedList();
 		for (int i = 0; i < number.length(); i++) {
-			String s = number.charAt(i) + "";
-			obj.insert(s);
+			String c = number.charAt(i)+ "";
+			obj.insert(c);
 		}
 		return obj;
 
 	}
 
 	public static String digitsToNumber(LinkedList list) {
+		String str = "";
 		Node node = list.first;
-		String str = new String();
 		for (int i = 0; i < list.size; i++) {
 			str += node.data;
 			node = node.next;
