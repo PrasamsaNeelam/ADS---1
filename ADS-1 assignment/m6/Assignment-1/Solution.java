@@ -9,7 +9,10 @@ import java.util.Scanner;
  * Class for solution.
  */
 public class Solution {
-    Solution() {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
 
     }
     /**
@@ -33,7 +36,8 @@ public class Solution {
             // case "addLargeNumbers":
             //  pDigits = AddLargeNumbers.numberToDigits(p);
             //  qDigits = AddLargeNumbers.numberToDigits(q);
-            //  LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
+            //  LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits,
+            //  qDigits);
             //  System.out.println(AddLargeNumbers.digitsToNumber(result));
             //  break;
         default:
