@@ -34,7 +34,8 @@ class Steque {
 		size++;
 	}
 	void enqueue(String item) {
-		Node obj = new Node();
+		//System.out.println(item);
+		Node obj = new Node(item);
 		if (size == 0) {
 			start = obj;
 			end = start;
