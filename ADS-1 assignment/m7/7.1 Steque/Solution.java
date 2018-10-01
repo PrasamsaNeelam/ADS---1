@@ -11,7 +11,7 @@ public final class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
 
     }
     /**
@@ -50,3 +50,4 @@ public final class Solution {
         }
     }
 }
+
