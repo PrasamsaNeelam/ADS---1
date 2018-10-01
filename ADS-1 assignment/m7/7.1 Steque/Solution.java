@@ -37,7 +37,7 @@ class Steque {
 		Node obj = new Node();
 		if (size == 0) {
 			start = obj;
-			end = obj;
+			end = start;
 			size++;
 			return;
 		}
