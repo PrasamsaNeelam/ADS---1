@@ -34,7 +34,6 @@ class Steque {
 		size++;
 	}
 	void enqueue(String item) {
-		//System.out.println(item);
 		Node obj = new Node(item);
 		if (size == 0) {
 			start = obj;
@@ -71,10 +70,15 @@ class Steque {
 		temp = start;
 		String out = "";
 		while(temp != null) {
-			out += temp.data + ", ";
+			out += temp.data + ",";
 			temp = temp.next;
 		}
-		return out.substring(0, out.length() - 2);
+		String[] tokens = out.split(",");
+		String str = "";
+		for (int i=0; i<out.length() - 2; i++) {
+			str += tokens[i] + ", ";
+		}
+		return str;
 	}
 }
 
@@ -104,6 +108,9 @@ public class Solution {
 				case "enqueue":
 				sq.enqueue(tokens[1]);
 				System.out.println(sq);
+				break;
+				default:
+				sq = new Steque();
 				break;
 			}
 		}
