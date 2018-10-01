@@ -65,6 +65,9 @@ class Steque {
 		return size;
 	}
 	public String toString() {
+		if (size == 0) {
+			System.out.println("Steque is empty.");
+		}
 		temp = start;
 		String out = "";
 		while(temp != null) {
