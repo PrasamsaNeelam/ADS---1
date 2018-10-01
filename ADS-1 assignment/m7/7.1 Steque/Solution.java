@@ -65,7 +65,8 @@ class Steque {
 	}
 	public String toString() {
 		if (size == 0) {
-			System.out.println("Steque is empty.");
+			//System.out.println("Steque is empty.");
+			return  "Steque is empty.";
 		}
 		temp = start;
 		String out = "";
@@ -73,8 +74,7 @@ class Steque {
 			out += temp.data + ", ";
 			temp = temp.next;
 		}
-		String str = out.substring(0, out.length() - 2);
-		return str;
+		return out.substring(0, out.length() - 2);
 	}
 }
 
