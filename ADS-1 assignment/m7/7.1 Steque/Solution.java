@@ -66,7 +66,7 @@ class Steque {
 	public String toString() {
 		temp = start;
 		String out = "";
-		while(temp.next != null) {
+		while(temp != null) {
 			out += temp.data + ", ";
 			temp = temp.next;
 		}
