@@ -46,7 +46,10 @@ class Steque {
 		size++;
 	}
 	String pop() throws Exception {
-		String data = start.data; 
+		if (size == 0) {
+			throw new Exception("Steque is empty.");
+		}
+		String data = start.data;
 		start = start.next;
 		size--;
 		return data;
@@ -91,7 +94,7 @@ public class Solution {
 					sq.pop();
 					System.out.println(sq);
 				} catch(Exception e) {
-
+					System.out.println(e.getMessage());
 				}
 				break;
 				case "enqueue":
