@@ -57,6 +57,9 @@ public class Steque {
     /**
      * { pushes the node at the left of List }.
      *
+     *All the operations in this method take constant time.
+     *So, the time complexity equals O(1).
+     *
      * @param      item  The item
      */
     void push(final String item) {
@@ -73,6 +76,9 @@ public class Steque {
     }
     /**
      * { add the node at the right of the List }.
+     *
+     * All the operations in this method take constant time.
+     * So, the time complexity equals O(1).
      *
      * @param      item  The item
      */
@@ -91,6 +97,9 @@ public class Steque {
     /**
      * { pops the node from the left }.
      *
+     * All the operations in this method take constant time.
+     * So, the time complexity equals O(1).
+     *
      * @return     { description_of_the_return_value }
      *
      * @throws     Exception  { exception_description }
@@ -106,6 +115,9 @@ public class Steque {
     }
     /**
      * Determines if empty.
+     * 
+     * All the operations in this method take constant time.
+     * So, the time complexity equals O(1).
      *
      * @return     True if empty, False otherwise.
      */
@@ -117,6 +129,9 @@ public class Steque {
     }
     /**
      * { returns size }.
+     * 
+     * All the operations in this method take constant time.
+     * So, the time complexity equals O(1).
      *
      * @return     { description_of_the_return_value }
      */
@@ -125,7 +140,11 @@ public class Steque {
     }
     /**
      * Returns a string representation of the object.
-     *
+     * 
+     * The while loop iterates N times.
+     * For each iteration the time complexity of this method is 1.
+     * So the final time complexity equals O(N).
+     * 
      * @return     String representation of the object.
      */
     public String toString() {
