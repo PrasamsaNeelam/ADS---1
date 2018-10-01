@@ -70,14 +70,10 @@ class Steque {
 		temp = start;
 		String out = "";
 		while(temp != null) {
-			out += temp.data + ",";
+			out += temp.data + ", ";
 			temp = temp.next;
 		}
-		String[] tokens = out.split(",");
-		String str = "";
-		for (int i=0; i<out.length() - 2; i++) {
-			str += tokens[i] + ", ";
-		}
+		String str = out.substring(0, out.length() - 2);
 		return str;
 	}
 }
