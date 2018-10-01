@@ -107,6 +107,7 @@ public class Solution {
 				break;
 				default:
 				sq = new Steque();
+				System.out.println();
 				break;
 			}
 		}
