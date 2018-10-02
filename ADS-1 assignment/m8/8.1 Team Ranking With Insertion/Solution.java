@@ -11,19 +11,19 @@ class Team implements Comparable<Team> {
 	/**
 	 * { var for team name }.
 	 */
-	String teamName;
+	private String teamName;
 	/**
 	 * { var for win }.
 	 */
-	int wins;
+	private int wins;
 	/**
 	 * { var for losses }.
 	 */
-	int losses;
+	private int losses;
 	/**
 	 * { var for draws }.
 	 */
-	int draws;
+	private int draws;
 	/**
 	 * Constructs the object.
 	 *
@@ -38,6 +38,13 @@ class Team implements Comparable<Team> {
 		this.losses = loss;
 		this.draws = draw;
 	}
+
+	/**
+	 * getter function.
+	 */
+	public String getTeamName() {
+		return teamName;
+	}
 	/**
 	 * { function for comparing }.
 	 *
@@ -45,7 +52,7 @@ class Team implements Comparable<Team> {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	public int compareTo(Team obj) {
+	public int compareTo(final Team obj) {
 		if (this.wins > obj.wins) {
 			return 1;
 		}
@@ -102,7 +109,7 @@ class Sort {
 	 *
 	 * @param      team  The teamgiven
 	 */
-	void addTeam(Team team) {
+	void addTeam(final Team team) {
 		try {
 			arr[count++] = team;
 			return;
@@ -122,11 +129,11 @@ class Sort {
 	 * Swaps the values and places the smaller one in the beginning.
 	 * Time complexity is 1 only assigning of values.
 	 *
-	 * @param      teams  The teams
+	 * @param      team  The teams
 	 * @param      i      { Index value. }
 	 * @param      j      { Index value. }
 	 */
-	void exchange(Team[] team, int i, int j) {
+	void exchange(final Team[] team, final int i, final int j) {
 		Team t = team[j];
 		team[j] = team[i];
 		team[i] = t;
@@ -140,7 +147,7 @@ class Sort {
 	public String toString() {
 		String str = "";
 		for (int i = 0; i < count; i++) {
-			str += arr[i].teamName + ",";
+			str += arr[i].getTeamName() + ",";
 		}
 		return str.substring(0, str.length() - 1);
 	}
@@ -155,7 +162,6 @@ class Sort {
 	 *
 	 */
 	void Selectionsort() {
-
 		for (int i = 0; i < count - 1; i++) {
 			int min = i;
 			for (int j = i + 1; j < count; j++) {
@@ -178,7 +184,6 @@ class Sort {
 	 * @return     { Boolean value based on the comparision }
 	 */
 	boolean less(Team[] arr, int i , int j) {
-
 		return arr[i].compareTo(arr[j]) > 0;
 	}
 }
