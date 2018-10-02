@@ -167,7 +167,7 @@ class Sort {
 	 * lesser or not if less the exchange is happening.
 	 *
 	 */
-	void Selectionsort() {
+	void selectionSort() {
 		for (int i = 0; i < count - 1; i++) {
 			int min = i;
 			for (int j = i + 1; j < count; j++) {
@@ -230,7 +230,7 @@ class Solution {
             String[] input = scan.nextLine().split(",");
             s.addTeam(createTeam(input));
         }
-        s.Selectionsort();
+        s.selectionSort();
         System.out.println(s);
     }
 }
