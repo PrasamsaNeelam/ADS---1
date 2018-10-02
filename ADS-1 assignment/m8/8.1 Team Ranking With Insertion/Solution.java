@@ -91,9 +91,12 @@ class Team implements Comparable<Team> {
  */
 class Sort {
 	/**
-	 * { var for team array}.
+	 * { variable }.
 	 */
 	private final int ten = 10;
+	/**
+	 * { var for team array}.
+	 */
 	private Team[] arr = new Team[ten];
 	/**
 	 * count to keep track in array.
