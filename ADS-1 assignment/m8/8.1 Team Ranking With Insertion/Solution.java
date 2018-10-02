@@ -93,7 +93,7 @@ class Sort {
 	/**
 	 * { var for team array}.
 	 */
-	final int ten = 10;
+	private final int ten = 10;
 	private Team[] arr = new Team[ten];
 	/**
 	 * count to keep track in array.
