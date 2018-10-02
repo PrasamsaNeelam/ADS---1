@@ -189,7 +189,7 @@ class Sort {
 	 *
 	 * @return     { Boolean value based on the comparision }
 	 */
-	boolean less(Team[] arr, int i , int j) {
+	boolean less(final Team[] arr, final int i , final int j) {
 		return arr[i].compareTo(arr[j]) > 0;
 	}
 }
