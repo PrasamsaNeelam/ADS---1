@@ -183,14 +183,14 @@ class Sort {
 	/**
 	 * Less comparision.
 	 *
-	 * @param      arr   The arr
+	 * @param      array   The arr
 	 * @param      i     { Index value. }
 	 * @param      j     { Index value. }
 	 *
 	 * @return     { Boolean value based on the comparision }
 	 */
-	boolean less(final Team[] arr, final int i , final int j) {
-		return arr[i].compareTo(arr[j]) > 0;
+	boolean less(final Team[] array, final int i , final int j) {
+		return array[i].compareTo(array[j]) > 0;
 	}
 }
 /**
