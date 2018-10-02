@@ -40,7 +40,9 @@ class Team implements Comparable<Team> {
 	}
 
 	/**
-	 * getter function.
+	 * Gets the team name.
+	 *
+	 * @return     The team name.
 	 */
 	public String getTeamName() {
 		return teamName;
@@ -91,7 +93,7 @@ class Sort {
 	/**
 	 * { var for team array}.
 	 */
-	public Team[] arr = new Team[10];
+	private Team[] arr = new Team[10];
 	/**
 	 * count to keep track in array.
 	 */
