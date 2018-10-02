@@ -101,7 +101,7 @@ class Sort {
 	/**
 	 * count to keep track in array.
 	 */
-	int count;
+	private int count;
 	/**
 	 * Constructs the object.
 	 */
@@ -110,7 +110,7 @@ class Sort {
 	}
 	/**
 	 * Adds a team.
-	 * 
+	 *
 	 * Time complexity is N.
 	 *
 	 * @param      team  The teamgiven
