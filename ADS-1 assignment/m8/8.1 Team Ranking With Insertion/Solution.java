@@ -170,8 +170,8 @@ class Sort {
 	void insertionSort() {
 		for (int i = 0; i < count - 1; i++) {
 			for (int j = i; j > 0; j--) {
-				if (less(arr, j, j - 1)) {
-					exchange(arr, j, j - 1);
+				if (less(arr, j-1 , j)) {
+					exchange(arr, j-1, j);
 				} else {
 					break;
 				}
