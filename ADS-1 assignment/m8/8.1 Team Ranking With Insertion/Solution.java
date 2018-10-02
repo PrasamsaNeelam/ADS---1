@@ -1,16 +1,50 @@
+/**
+ * @author : Prasamsa.
+ * date : 2nd October,2018.
+ */
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for team.
+ */
 class Team implements Comparable<Team> {
+	/**
+	 * { var for team name }.
+	 */
 	String teamName;
+	/**
+	 * { var for win }.
+	 */
 	int wins;
+	/**
+	 * { var for losses }.
+	 */
 	int losses;
+	/**
+	 * { var for draws }.
+	 */
 	int draws;
-	Team(String name, int win, int loss, int draw) {
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      name  The name
+	 * @param      win   The window
+	 * @param      loss  The loss
+	 * @param      draw  The draw
+	 */
+	Team(final String name, final int win, final int loss, final int draw) {
 		this.teamName = name;
 		this.wins = win;
 		this.losses = loss;
 		this.draws = draw;
 	}
+	/**
+	 * { function for comparing }.
+	 *
+	 * @param      obj   The object
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public int compareTo(Team obj) {
 		if (this.wins > obj.wins) {
 			return 1;
@@ -32,12 +66,24 @@ class Team implements Comparable<Team> {
 		}
 		return 0;
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		return this.teamName;
 		//return this.wins + " " + this.losses + " " + this.draws;
 	}
 }
+
+/**
+ * Class for sort.
+ */
 class Sort {
+	/**
+	 * { var for team array}.
+	 */
 	public Team[] arr = new Team[10];
 	/**
 	 * count to keep track in array.
@@ -146,6 +192,13 @@ class Solution {
 	Solution() {
 
 	}
+	/**
+	 * Creates a team.
+	 *
+	 * @param      array  The array
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public static Team createTeam(final String[] array) {
         String name = array[0];
         //System.out.println(name);
@@ -154,6 +207,11 @@ class Solution {
         int draws = Integer.parseInt(array[2 + 1]);
         return new Team(name, wins, losses, draws);
     }
+    /**
+     * { main function }.
+     *
+     * @param      args  The arguments
+     */
 	public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         Sort s = new Sort();
