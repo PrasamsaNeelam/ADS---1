@@ -51,8 +51,8 @@ class LinkedList {
 			size++;
 			return obj;
 		}
-		first.next = insertAt(index, start.next, obj, count + 1);
-		return start;
+		first.next = insertAt(index, first.next, obj, count + 1);
+		return first;
 	}
 	// time complexity for this method is n
     //takes O(n) time complexity
