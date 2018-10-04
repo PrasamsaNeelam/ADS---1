@@ -16,10 +16,11 @@ class LinkedList {
 	// time complexity for this method is n
     //takes O(n) time complexity
 	void insertAt(int index, String element) throws Exception {
-		Node obj = new Node(element);
+		
 		if (index < 0 || index > size) {
 			throw new Exception();
 		}
+		Node obj = new Node(element);
 		// Node previous = null;
 		// Node temp = start;
 		// int count = 0;
@@ -50,7 +51,7 @@ class LinkedList {
 			size++;
 			return obj;
 		}
-		start.next = insertAt(index, start.next, obj, count + 1);
+		first.next = insertAt(index, start.next, obj, count + 1);
 		return start;
 	}
 	// time complexity for this method is n
