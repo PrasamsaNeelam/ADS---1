@@ -23,7 +23,7 @@ class LinkedList {
         /**
          * Constructs the object.
          *
-         * @param      data  The data
+         * @param      data1  The data
          */
         Node(final String data1) {
             this.data = data1;
@@ -44,7 +44,6 @@ class LinkedList {
         start = null;
         size = 0;
     }
-    
     // time complexity for this method is n
     //takes O(n) time complexity
     /**
