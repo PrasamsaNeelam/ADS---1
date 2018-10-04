@@ -25,8 +25,8 @@ class LinkedList {
          *
          * @param      data  The data
          */
-        Node(final String data) {
-            this.data = data;
+        Node(final String data1) {
+            this.data = data1;
         }
     }
     /**
@@ -44,8 +44,17 @@ class LinkedList {
         start = null;
         size = 0;
     }
+    
     // time complexity for this method is n
     //takes O(n) time complexity
+    /**
+     * { function for insert at index }.
+     *
+     * @param      index      The index
+     * @param      element    The element
+     *
+     * @throws     Exception  { exception_description }
+     */
     void insertAt(final int index, final String element) throws Exception {
         if (index < 0 || index > size) {
             throw new Exception();
@@ -75,6 +84,18 @@ class LinkedList {
     }
     // time complexity for this method is n
     //takes O(n) time complexity
+    /**
+     * { function for insertat }.
+     *
+     * @param      index      The index
+     * @param      first      The first
+     * @param      obj        The object
+     * @param      count      The count
+     *
+     * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
+     */
     Node insertAt(final int index, final Node first, final Node obj,
                   final int count) throws Exception {
         if (index == count) {
@@ -87,11 +108,20 @@ class LinkedList {
     }
     // time complexity for this method is n
     //takes O(n) time complexity
+    /**
+     * { function for reverse }.
+     */
     void reverse() {
         reverse(null, start);
     }
     // time complexity for this method is n
     //takes O(n) time complexity
+    /**
+     * { function for reverse }.
+     *
+     * @param      previous  The previous
+     * @param      current   The current
+     */
     void reverse(final Node previous, final Node current) {
         if (current != null) {
             reverse(current, current.next);
@@ -100,6 +130,9 @@ class LinkedList {
             start = previous;
         }
     }
+    /**
+     * { print function }.
+     */
     void print() {
         String str = "";
         Node temp = start;
