@@ -1,16 +1,26 @@
+/**
+ * @author : Prasamsa.
+ * date : 4th October,2018.
+ */
 import java.util.Scanner;
 /**
  * Class for node.
  */
 class Node {
+	/**
+	 * { var for string data }.
+	 */
 	String data;
+	/**
+	 * { var for node next }.
+	 */
 	Node next;
 	/**
 	 * Constructs the object.
 	 *
 	 * @param      data  The data
 	 */
-	Node(String data) {
+	Node(final String data) {
 		this.data = data;
 	}
 }
@@ -18,7 +28,13 @@ class Node {
  * List of linkeds.
  */
 class LinkedList {
+	/**
+	 * { var for start node }.
+	 */
 	Node start;
+	/**
+	 * { var for size }.
+	 */
 	int size;
 	/**
 	 * Constructs the object.
@@ -28,9 +44,8 @@ class LinkedList {
 		size = 0;
 	}
 	// time complexity for this method is n
-    //takes O(n) time complexity
-	void insertAt(int index, String element) throws Exception {
-		
+	//takes O(n) time complexity
+	void insertAt(final int index, final String element) throws Exception {
 		if (index < 0 || index > size) {
 			throw new Exception();
 		}
@@ -58,8 +73,9 @@ class LinkedList {
 		// }
 	}
 	// time complexity for this method is n
-    //takes O(n) time complexity
-	Node insertAt(int index, Node first, Node obj, int count) throws Exception {
+	//takes O(n) time complexity
+	Node insertAt(final int index, final Node first, final Node obj,
+	              final int count) throws Exception {
 		if (index == count) {
 			obj.next = first;
 			size++;
@@ -69,13 +85,13 @@ class LinkedList {
 		return first;
 	}
 	// time complexity for this method is n
-    //takes O(n) time complexity
+	//takes O(n) time complexity
 	void reverse() {
 		reverse(null, start);
 	}
 	// time complexity for this method is n
-    //takes O(n) time complexity
-	void reverse(Node previous, Node current) {
+	//takes O(n) time complexity
+	void reverse(final Node previous, final Node current) {
 		if (current != null) {
 			reverse(current, current.next);
 			current.next = previous;
@@ -96,47 +112,45 @@ class LinkedList {
 /**
  * Class for solution.
  */
-public final class Solution {
-    /**
-     * Constructs the object.
-     */
-   private Solution() {
+final class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
 
-    }
-    /**
-     * { main function }.
-     *
-     * @param      args  The arguments
-     */
-    public static void main(final String[] args) {
-
-        Scanner s = new Scanner(System.in);
-        LinkedList ll = new LinkedList();
-        while (s.hasNextLine()) {
-            String[] input = s.nextLine().split(" ");
-            switch (input[0]) {
-                case "insertAt" :
-                try {
-                ll.insertAt(Integer.parseInt(input[1]), input[2]);
-                ll.print();
-            } catch (Exception e) {
-                    System.out.println(
-                    "Can't insert at this position.");
-                }
-                break;
-                case "reverse" :
-                try {
-                ll.reverse();
-                ll.print();
-            } catch (Exception e) {
-                System.out.println("No elements to reverse.");
-                }
-                break;
-                default :
-                break;
-            }
-        }
-    }
+	}
+	/**
+	 * { main function }.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
+		Scanner s = new Scanner(System.in);
+		LinkedList ll = new LinkedList();
+		while (s.hasNextLine()) {
+			String[] input = s.nextLine().split(" ");
+			switch (input[0]) {
+			case "insertAt" :
+				try {
+					ll.insertAt(Integer.parseInt(input[1]), input[2]);
+					ll.print();
+				} catch (Exception e) {
+					System.out.println(
+					    "Can't insert at this position.");
+				}
+				break;
+			case "reverse" :
+				try {
+					ll.reverse();
+					ll.print();
+				} catch (Exception e) {
+					System.out.println("No elements to reverse.");
+				}
+				break;
+			default :
+				break;
+			}
+		}
+	}
 
 }
-
