@@ -40,7 +40,7 @@ class LinkedList {
 		// 	count++;
 		// }
 	}
-	Node insertAt(int index, Node first, Node obj, int count) {
+	Node insertAt(int index, Node first, Node obj, int count) throws Exception {
 		if (index == count) {
 			obj.next = first;
 			size++;

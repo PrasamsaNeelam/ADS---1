@@ -17,6 +17,7 @@ Starting audit...
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m10\10.1 LinkedList using Recursion\Solution.java:16:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m10\10.1 LinkedList using Recursion\Solution.java:16:23: Parameter index should be final. [FinalParameters]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m10\10.1 LinkedList using Recursion\Solution.java:16:34: Parameter element should be final. [FinalParameters]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m10\10.1 LinkedList using Recursion\Solution.java:43: Line is longer than 80 characters (found 84). [LineLength]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m10\10.1 LinkedList using Recursion\Solution.java:43:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m10\10.1 LinkedList using Recursion\Solution.java:43:23: Parameter index should be final. [FinalParameters]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m10\10.1 LinkedList using Recursion\Solution.java:43:34: Parameter first should be final. [FinalParameters]
@@ -28,4 +29,4 @@ Starting audit...
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m10\10.1 LinkedList using Recursion\Solution.java:55:37: Parameter current should be final. [FinalParameters]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m10\10.1 LinkedList using Recursion\Solution.java:63:9: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
-Checkstyle ends with 28 errors.
+Checkstyle ends with 29 errors.
