@@ -3,31 +3,32 @@
  * date : 4th October,2018.
  */
 import java.util.Scanner;
-/**
- * Class for node.
- */
-class Node {
-    /**
-     * { var for string data }.
-     */
-    String data;
-    /**
-     * { var for node next }.
-     */
-    Node next;
-    /**
-     * Constructs the object.
-     *
-     * @param      data  The data
-     */
-    Node(final String data) {
-        this.data = data;
-    }
-}
+
 /**
  * List of linkeds.
  */
 class LinkedList {
+    /**
+    * Class for node.
+    */
+    class Node {
+        /**
+         * { var for string data }.
+         */
+        private String data;
+        /**
+         * { var for node next }.
+         */
+        private Node next;
+        /**
+         * Constructs the object.
+         *
+         * @param      data  The data
+         */
+        Node(final String data) {
+            this.data = data;
+        }
+    }
     /**
      * { var for start node }.
      */
