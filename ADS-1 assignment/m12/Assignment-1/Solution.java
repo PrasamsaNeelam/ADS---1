@@ -47,8 +47,9 @@ final class Student {
      * @param      marks   The marks
      * @param      reserv  The reserv
      */
-    Student(final String name, final String dob1, final Double sub1,
-        final Double sub2, final Double sub3, final Double marks, final String reserv) {
+    Student(final String name, final String dob1, final Double sub1, 
+        final Double sub2, final Double sub3, final Double marks,
+        final String reserv) {
         this.studentName = name;
         this.dob = dob1;
         this.sub1Marks = sub1;
@@ -129,7 +130,7 @@ final class Insertion {
      */
     public static void sort(final Comparable[] a, final int lo, final int hi) {
         for (int i = lo; i < hi; i++) {
-            for (int j = i; j > lo && less(a[j], a[j-1]); j--) {
+            for (int j = i; j > lo && less(a[j], a[j - 1]); j--) {
                 exch(a, j, j - 1);
             }
         }
@@ -159,21 +160,10 @@ final class Insertion {
     private static boolean isSorted(final Comparable[] a,
         final int lo, final int hi) {
         for (int i = lo + 1; i < hi; i++) {
-            if (less(a[i], a[i - 1])) return false;
+            if (less(a[i], a[i - 1])) {
+                return false;
         }
         return true;
-    }
-    /**
-     * checks whether the comparable is less.
-     *
-     * @param      v           The v
-     * @param      w           The w
-     * @param      totalMarks  The total marks
-     *
-     * @return     returns boolean.
-     */
-    private static boolean less(final Comparable v, final Comparable w) {
-        return v.compareTo(w) < 0;
     }
 }
 
@@ -204,11 +194,13 @@ public class Solution {
         while (s.hasNext()) {
             String[] arr = s.nextLine().split(",");
             String[] dob = arr[1].split("-");
-            Student std = new Student(arr[0], arr[1], Double.parseDouble(arr[2]), Double.parseDouble(arr[3]), Double.parseDouble(arr[4]), Double.parseDouble(arr[4]), arr[6]);
+            Student std = new Student(arr[0], arr[1], Double.parseDouble(arr[2]), Double.parseDouble(arr[3]),
+                Double.parseDouble(arr[4]), Double.parseDouble(arr[4]), arr[6]);
             std.addStudent(std);
         }
 
         }
     }
+}
 
 
