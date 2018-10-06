@@ -47,7 +47,8 @@ final class Student {
      * @param      marks   The marks
      * @param      reserv  The reserv
      */
-    Student(final String name, final String dob1, final Double sub1, final Double sub2, final Double sub3, final Double marks, final String reserv) {
+    Student(final String name, final String dob1, final Double sub1,
+        final Double sub2, final Double sub3, final Double marks, final String reserv) {
         this.studentName = name;
         this.dob = dob1;
         this.sub1Marks = sub1;
@@ -100,10 +101,12 @@ final class Student {
     public String getReserv() {
         return this.reservation;
     }
-    // public int compareTo(Student std) {
- //     if (!getMarks.equals())
- //    }
-    public void addStudent(Student std) {
+    /**
+     * Adds a student.
+     *
+     * @param      std   The standard
+     */
+    public void addStudent(final Student std) {
 
     }
 }
@@ -114,32 +117,50 @@ final class Insertion {
     /**
      * Constructs the object.
      */
-    private Insertion() { 
+    private Insertion() {
 
     }
     /**
      * Rearranges the array in ascending order, using the natural order.
      *
-     * @param      stdarr     The array
+     * @param      a     The array
      * @param      lo    The lower
      * @param      hi    The higher
      */
     public static void sort(final Comparable[] a, final int lo, final int hi) {
         for (int i = lo; i < hi; i++) {
             for (int j = i; j > lo && less(a[j], a[j-1]); j--) {
-                exch(a, j, j-1);
+                exch(a, j, j - 1);
             }
         }
         assert isSorted(a, lo, hi);
     }
+    /**
+     * exchanges.
+     *
+     * @param      a     { a array }
+     * @param      i     { the i }
+     * @param      j     { the j }
+     */
     private static void exch(final Object[] a, final int i, final int j) {
         Object swap = a[i];
         a[i] = a[j];
         a[j] = swap;
     }
-    private static boolean isSorted(final Comparable[] a, final int lo, final int hi) {
-        for (int i = lo+1; i < hi; i++)
-            if (less(a[i], a[i-1])) return false;
+    /**
+     * Determines if sorted.
+     *
+     * @param      a     The array
+     * @param      lo    The lower
+     * @param      hi    The higher
+     *
+     * @return     True if sorted, False otherwise.
+     */
+    private static boolean isSorted(final Comparable[] a,
+        final int lo, final int hi) {
+        for (int i = lo + 1; i < hi; i++) {
+            if (less(a[i], a[i - 1])) return false;
+        }
         return true;
     }
     /**
