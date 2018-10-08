@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m13\13.1 isMinHeap\Solution.java:12:5: Missing a Javadoc comment. [JavadocVariable]
 Audit done.
-Checkstyle ends with 1 errors.

@@ -9,6 +9,9 @@ import java.util.Scanner;
  * @param      <E>   Generic
  */
 class Minheap<E extends Comparable<E>> {
+    /**
+     * Heap array.
+     */
     private E[] array;
     /**
      * Constructs the object.
