@@ -1,16 +1,4 @@
 Starting audit...
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m13\13.1 isMinHeap\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m13\13.1 isMinHeap\Solution.java:3: Missing a Javadoc comment. [JavadocType]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m13\13.1 isMinHeap\Solution.java:4:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m13\13.1 isMinHeap\Solution.java:4:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m13\13.1 isMinHeap\Solution.java:5:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m13\13.1 isMinHeap\Solution.java:8:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m13\13.1 isMinHeap\Solution.java:10:47: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m13\13.1 isMinHeap\Solution.java:16:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m13\13.1 isMinHeap\Solution.java:20: Missing a Javadoc comment. [JavadocType]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m13\13.1 isMinHeap\Solution.java:20:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m13\13.1 isMinHeap\Solution.java:21:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m13\13.1 isMinHeap\Solution.java:21:33: Parameter args should be final. [FinalParameters]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m13\13.1 isMinHeap\Solution.java:79: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m13\13.1 isMinHeap\Solution.java:12:5: Missing a Javadoc comment. [JavadocVariable]
 Audit done.
-Checkstyle ends with 13 errors.
+Checkstyle ends with 1 errors.
