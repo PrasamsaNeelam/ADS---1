@@ -7,17 +7,14 @@ class Minheap<E extends Comparable<E>> {
     }
     public boolean isMinheap(final E[] arr) {
     	for (int i = 0; i < arr.length - 1; i++) {
-    		if (less(arr[i], arr[i + 1])) {
-	    		return true;
-	    	}
-	    	}
-	    	return false;
-        }
+    		if (!less(arr[i], arr[i + 1])){
+                return false;
+            }
+	    }
+	    return true;
+    }
     public boolean less(final E i, final E j) {
-    	if (i.compareTo(j) <= 0) {
-    		return true;
-    	}
-    	return false;
+    	return i.compareTo(j) <= 0;
     }
 }
 public class Solution {
