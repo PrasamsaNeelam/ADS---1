@@ -1,17 +1,15 @@
 import java.util.Scanner;
-
-public final class Solution {
-    /**.
+/**
+ * Class for Solution.
+ */
+final class Solution {
+    /**
      * Constructs the object.
      */
     private Solution() {
-
     }
-    // time complexity for the main method is N
-    // Because there is one for loop.
-    // for loop iterates until N times.
-    /**.
-     * main function to drive the program.
+    /**
+     * Main Function.
      *
      * @param      args  The arguments
      */
@@ -29,9 +27,11 @@ public final class Solution {
             String line = sc.nextLine();
             String[] tokens = line.split(",");
             Student student = new Student(tokens[0], tokens[1],
-             Integer.parseInt(tokens[2]), Integer.parseInt(tokens[2 + 1]),
-             Integer.parseInt(tokens[2 + 2]), Integer.parseInt(tokens[2 + 2 + 1]),
-             tokens[2 + 2 + 2]);
+                                          Integer.parseInt(tokens[2]),
+                                          Integer.parseInt(tokens[2 + 1]),
+                                          Integer.parseInt(tokens[2 + 2]),
+                                          Integer.parseInt(tokens[2 + 2 + 1]),
+                                          tokens[2 + 2 + 2]);
             sort.add(student);
         }
         sort.sort();

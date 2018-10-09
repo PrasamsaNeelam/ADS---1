@@ -2,35 +2,35 @@
  * Class for student.
  */
 class Student {
-    /**.
-     * { var_description }
+    /**
+     * variable for name.
      */
     private String name;
-    /**.
-     * { var_description }
+    /**
+     * variable for date.
      */
     private String date;
-    /**.
-     * { var_description }
+    /**
+     * variable for marks1.
      */
     private int marks1;
-    /**.
-     * { var_description }
+    /**
+     * variable for marks2.
      */
     private int marks2;
-    /**.
-     * { var_description }
+    /**
+     * variable for marks3.
      */
     private int marks3;
-    /**.
-     * { var_description }
+    /**
+     * variable for total.
      */
     private int total;
-    /**.
-     * { var_description }
+    /**
+     * variable for category.
      */
     private String category;
-    /**.
+    /**
      * Constructs the object.
      *
      * @param      nme      The nme
@@ -42,7 +42,7 @@ class Student {
      * @param      categry  The categry
      */
     Student(final String nme, final String dte, final int m1,
-        final int m2, final int m3, final int tot, final String categry) {
+            final int m2, final int m3, final int tot, final String categry) {
         this.name = nme;
         this.date = dte;
         this.marks1 = m1;
@@ -67,7 +67,8 @@ class Student {
     public String getDate() {
         String revdate = "";
         revdate = date.substring(2 + 2 + 2) + "-"
-        + date.substring(2 + 1, 2 + 2 + 1) + "-" + date.substring(0, 2);
+                  + date.substring(2 + 1, 2 + 2 + 1) + "-"
+                  + date.substring(0, 2);
         return revdate;
     }
     /**.
@@ -110,18 +111,17 @@ class Student {
     public String getCategory() {
         return this.category;
     }
-    /**.
-     * { function_description }
+    /**
+     * Print function.
      *
      * @return     { description_of_the_return_value }
      */
     public String print() {
         return this.getName() + "," + this.getTotal() + ","
-        + this.getCategory();
+               + this.getCategory();
     }
-    // time complexity of this method is O(1) as it checks one time.
-    /**.
-     * { function_description }
+    /**
+     * time complexity of this method is O(1) as it checks one time.
      *
      * @param      that  The that
      *
@@ -149,8 +149,8 @@ class Student {
             }
         }
     }
-    /**.
-     * { function_description }
+    /**
+     * Compare Date.
      *
      * @param      d1    The d 1
      * @param      d2    The d 2
