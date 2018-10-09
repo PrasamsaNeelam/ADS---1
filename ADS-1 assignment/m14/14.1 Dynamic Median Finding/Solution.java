@@ -1,23 +1,28 @@
 import java.util.Scanner;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-
-public class Solution {
-
-    private Solution () {
-
+/**
+ * Class for solution.
+ */
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
     }
-    public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
+    /**
+     * Main Function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
 
         MinPQ<Float> minpq = new MinPQ<Float>(n);
         MaxPQ<Float> maxpq = new MaxPQ<Float>(n);
 
         Float median = 0.0f;
         for (int i = 0; i < n; i++) {
-            Float val = s.nextFloat();
+            Float val = scan.nextFloat();
             if (val > median) {
                 minpq.insert(val);
             } else {
@@ -30,7 +35,7 @@ public class Solution {
             }
             if (maxpq.size() - minpq.size() > 1) {
                 minpq.insert(maxpq.delMax());
-                
+
             }
 
             if (minpq.size() == maxpq.size()) {
