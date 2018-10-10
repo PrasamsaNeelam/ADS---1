@@ -1,4 +1,4 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 X
 R
@@ -17,13 +17,10 @@ null
 Your Output: 
 X
 R
-2
+1
 true
-A 8
 C 4
 E 12
-E 12
-E 6
 H 5
 L 11
 M 9
@@ -31,7 +28,7 @@ P 10
 R 3
 S 0
 X 7
-8
+null
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -52,19 +49,17 @@ false
 null
 Your Output: 
 Y
-N 11
 O 10
 Q 4
-S 7
 S 7
 T 8
 U 5
 Y 3
 Exception in thread "main" java.lang.NullPointerException
-	at BinarySearchST.floor(Solution.java:97)
-	at Solution.main(Solution.java:159)
+	at BinarySearchST.floor(Solution.java:98)
+	at Solution.main(Solution.java:160)
 ----------------------------------------
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 X
 E 10
@@ -89,7 +84,6 @@ T
 Your Output: 
 X
 E 10
-E 10
 L 9
 M 7
 O 1
@@ -102,14 +96,14 @@ X 5
 0
 0
 0
-1
-10
-10
+0
+9
+9
 true
 5
 T
 ----------------------------------------
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 B 0
 C 10
@@ -130,13 +124,9 @@ true
 13
 P
 Your Output: 
-A 14
-A 8
 B 0
 C 10
 E 18
-E 18
-E 12
 H 11
 I 1
 L 17
@@ -144,17 +134,16 @@ M 15
 N 2
 P 16
 R 9
-R 9
 S 6
 X 13
 Y 5
 Y
-17
+12
 true
 13
 P
 ----------------------------------------
-########## Testcase 4: Failed ##########
+########## Testcase 4: Passed ##########
 Expected Output: 
 M
 null
@@ -173,12 +162,10 @@ Your Output:
 M
 null
 Y
-9
+7
 true
 B 8
-B 8
 E 10
-L 9
 L 9
 M 2
 O 4

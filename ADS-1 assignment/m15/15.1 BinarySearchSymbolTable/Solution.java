@@ -36,6 +36,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
 		int r = rank(key);
 		if (r < size && keys[r].compareTo(key) == 0) {
 			values[r] = value;
+			return;
 		}
 		if (size == keys.length) {
 			resize(2 * keys.length);
