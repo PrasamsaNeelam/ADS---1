@@ -1,2 +1,13 @@
 Starting audit...
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:56: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:89: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:118: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:130: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:149: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:159: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:169: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:191: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:209: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:229: Line has trailing spaces. [RegexpSingleline]
 Audit done.
+Checkstyle ends with 10 errors.
