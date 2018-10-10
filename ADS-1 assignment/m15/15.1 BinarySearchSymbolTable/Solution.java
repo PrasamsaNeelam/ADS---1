@@ -94,9 +94,11 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
     }
 
     Key floor(Key key) {
+    	if (key == null) {
+            throw new IllegalArgumentException("argument to floor() is null");
+        }
     	int r = rank(key);
-    	System.out.println(r + "NILU");
-    	if (keys[r].compareTo(key) == 0) {
+    	if (r < size && keys[r].compareTo(key) == 0) {
     		return key;
     	} else {
     		return keys[r - 1];
