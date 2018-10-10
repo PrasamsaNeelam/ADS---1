@@ -53,7 +53,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
     }
     /**
      * put function.
-     * 
+     *
      * The time complexity is O(log N).
      *
      * @param      key    The key
@@ -86,7 +86,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
     }
     /**
      * Rank Function.
-     * 
+     *
      * Time complexity is O(log N).
      *
      * @param      key   The key
@@ -115,7 +115,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
     }
     /**
      * checks whether the key is present.
-     * 
+     *
      * Time complexity is 1.
      *
      * @param      key   The key
@@ -127,7 +127,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
     }
     /**
      * Gets the key.
-     * 
+     *
      * Time complexity is O(log N).
      *
      * @param      key   The key
@@ -146,7 +146,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
     }
     /**
      * returns max key.
-     * 
+     *
      * Time complexity is O(1).
      *
      * @return     { Key }
@@ -156,8 +156,8 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
     }
     /**
      * returns min key.
-     * 
-     *Time complexity is O(1).
+     *
+     * Time complexity is O(1).
      *
      * @return     { key }
      */
@@ -165,9 +165,9 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
         return keys[0];
     }
     /**
-     *  return largest key less than or equal to key.
-     *  
-     *  Time complexity is O(log(N)).
+     * return largest key less than or equal to key.
+     *
+     * Time complexity is O(log(N)).
      *
      * @param      key   The key
      *
@@ -188,7 +188,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
     }
     /**
      * Delete minimum.
-     * 
+     *
      * Time complexity is O(1).
      */
     void deleteMin() {
@@ -206,7 +206,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
     }
     /**
      * deletes the key.
-     * 
+     *
      * Time complexity is O(log(N)).
      *
      * @param      key   The key
@@ -226,7 +226,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
     }
     /**
      * displays all keys.
-     * 
+     *
      * Time complexity is O(N).
      */
     void keys() {
