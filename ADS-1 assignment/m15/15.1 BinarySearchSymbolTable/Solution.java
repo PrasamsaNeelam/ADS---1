@@ -100,10 +100,12 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
     	int r = rank(key);
     	if (r < size && keys[r].compareTo(key) == 0) {
     		return key;
-    	} else {
-    		return keys[r - 1];
     	}
-    }
+    	if(r==0){
+    		return null;
+    	}
+    	return keys[r - 1];
+    	}
 
     void deleteMin() {
     	delete(keys[0]);
