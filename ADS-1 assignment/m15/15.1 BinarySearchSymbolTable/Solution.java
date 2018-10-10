@@ -95,6 +95,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
 
     Key floor(Key key) {
     	int r = rank(key);
+    	System.out.println(r + "NILU");
     	if (keys[r].compareTo(key) == 0) {
     		return key;
     	} else {
