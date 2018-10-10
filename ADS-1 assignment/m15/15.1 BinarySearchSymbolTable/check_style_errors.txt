@@ -1,8 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:6:8: Unused import - java.util.NoSuchElementException. [UnusedImports]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:14:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:95: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:164: Line is longer than 80 characters (found 90). [LineLength]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:232: Line is longer than 80 characters (found 84). [LineLength]
 Audit done.
-Checkstyle ends with 5 errors.
