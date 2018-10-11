@@ -64,9 +64,9 @@ class BinarySearchTree<Key, Value> {
 			obj.left = put(obj.left, key, val);
 		} else {
 			obj.value = val;
-			return obj;
+			//return obj;
 		}
-		return null;
+		return obj;
 	}
 }
 

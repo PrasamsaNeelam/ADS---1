@@ -2,7 +2,8 @@
 Expected Output: 
 1
 Your Output: 
-null
+Prassu
+1
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -12,10 +13,11 @@ Expected Output:
 2
 Your Output: 
 Prassu
-6
 null
 Prassu
-7
+null
+Prassu
+null
 Prassu
 null
 ----------------------------------------
@@ -27,5 +29,5 @@ Your Output:
 Prassu
 null
 Prassu
-7
+null
 ----------------------------------------
