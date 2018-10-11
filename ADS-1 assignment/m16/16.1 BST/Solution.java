@@ -124,15 +124,7 @@ class BinarySearchTree<Key, Value> {
     void put(final Book key, final int val) {
         root = put(root, key, val);
     }
-    /**
-     * Inserts the object.
-     *
-     * @param      obj   The object
-     * @param      key   The key
-     * @param      val   The value
-     *
-     * @return     returns the Node.
-     */
+
     Node put(final Node obj, final Book key, final int val) {
         if (obj == null) {
             return new Node(key, val);
@@ -169,21 +161,19 @@ public final class Solution {
         BinarySearchTree<Book, Integer> bst = new BinarySearchTree<Book,
         Integer>();
         Book book = new Book();
-        int three = 3;
-        int four = 4;
         while (s.hasNext()) {
             String[] tokens = s.nextLine().split(",");
             switch (tokens[0]) {
-                case "put":
+            case "put":
                 book = new Book(tokens[1], tokens[2],
-                    Double.parseDouble(tokens[three]));
-                bst.put(book, Integer.parseInt(tokens[four]));
+                                Double.parseDouble(tokens[2 + 1]));
+                bst.put(book, Integer.parseInt(tokens[2 + 2]));
                 break;
-                case "get":
+            case "get":
                 book = new Book(tokens[1], tokens[2],
-                    Double.parseDouble(tokens[three]));
+                                Double.parseDouble(tokens[2 + 1]));
                 System.out.println(bst.get(book));
-                default:
+            default:
                 break;
             }
         }
