@@ -6,19 +6,19 @@ class Node {
     /**
      * key variable.
      */
-    Book key;
+    protected Book key;
     /**
      * value variable.
      */
-    int value;
+    protected int value;
     /**
      * left node variable.
      */
-    Node left;
+    protected Node left;
     /**
      * right node varible.
      */
-    Node right;
+    protected Node right;
     /**
      * Constructs the object.
      *
@@ -86,7 +86,7 @@ class BinarySearchTree<Key, Value> {
     /**
      * root variable.
      */
-    Node root;
+    private Node root;
     /**
      * Constructs the object.
      */
@@ -124,7 +124,15 @@ class BinarySearchTree<Key, Value> {
     void put(final Book key, final int val) {
         root = put(root, key, val);
     }
-
+    /**
+     * Puts the value in the array.
+     *
+     * @param      obj   The object
+     * @param      key   The key
+     * @param      val   The value
+     *
+     * @return     { description_of_the_return_value }
+     */
     Node put(final Node obj, final Book key, final int val) {
         if (obj == null) {
             return new Node(key, val);

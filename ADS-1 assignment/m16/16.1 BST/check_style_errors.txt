@@ -1,10 +1,8 @@
 Starting audit...
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m16\16.1 BST\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m16\16.1 BST\Solution.java:9:10: Variable 'key' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m16\16.1 BST\Solution.java:13:9: Variable 'value' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m16\16.1 BST\Solution.java:17:10: Variable 'left' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m16\16.1 BST\Solution.java:21:10: Variable 'right' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m16\16.1 BST\Solution.java:89:10: Variable 'root' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m16\16.1 BST\Solution.java:128:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m16\16.1 BST\Solution.java:9:20: Variable 'key' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m16\16.1 BST\Solution.java:13:19: Variable 'value' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m16\16.1 BST\Solution.java:17:20: Variable 'left' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m16\16.1 BST\Solution.java:21:20: Variable 'right' must be private and have accessor methods. [VisibilityModifier]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 5 errors.
