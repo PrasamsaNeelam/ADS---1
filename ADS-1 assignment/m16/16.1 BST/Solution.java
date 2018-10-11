@@ -83,6 +83,9 @@ class Book implements Comparable<Book> {
  * @param      <Value>  The value
  */
 class BinarySearchTree<Key, Value> {
+    /**
+     * root variable.
+     */
     Node root;
     /**
      * Constructs the object.
@@ -182,7 +185,7 @@ public final class Solution {
                 System.out.println(bst.get(book));
                 default:
                 break;
-            }   
+            }
         }
     }
 }
