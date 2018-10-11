@@ -27,7 +27,7 @@ class Book implements Comparable<Book> {
 	}
 }
 
-class BinarySearchTree<Key, Integer> {
+class BinarySearchTree<Key, Value> {
 	Node root;
 	BinarySearchTree() {
 
@@ -35,7 +35,7 @@ class BinarySearchTree<Key, Integer> {
 	int get(Book key) {
 		Node x = root;
 		while(x != null) {
-			int cmp = key.compareTo(x.key);
+			int cmp = key.name.compareTo(x.key.name);
 			if (cmp < 0) {
 				x = x.left;
 			} else if (cmp > 0) {
