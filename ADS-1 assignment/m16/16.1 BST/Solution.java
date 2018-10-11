@@ -94,6 +94,8 @@ class BinarySearchTree<Key, Value> {
     }
     /**
      * Gets the value for key.
+     * 
+     * Time complexity is O(log(N)).
      *
      * @param      key   The key
      *
@@ -116,6 +118,8 @@ class BinarySearchTree<Key, Value> {
     }
     /**
      * Inserts the key and value.
+     * 
+     * Time complexity is O(log(N)).
      *
      * @param      key   The key
      * @param      val   The value
