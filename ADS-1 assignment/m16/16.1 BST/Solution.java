@@ -56,7 +56,7 @@ class BinarySearchTree<Key, Value> {
 		if (obj == null) {
 			return new Node(key, val);
 		}
-		int cmp = (obj.key).compareTo(key);
+		int cmp = key.compareTo(obj.key);
 		if (cmp > 0) {
 			obj.right = put(obj.right, key, val);
 		} else if(cmp < 0) {
