@@ -1,40 +1,39 @@
 import java.util.Scanner;
 /**
- * Class for node.
- */
-class Node {
-    /**
-     * key variable.
-     */
-    protected Book key;
-    /**
-     * value variable.
-     */
-    protected int value;
-    /**
-     * left node variable.
-     */
-    protected Node left;
-    /**
-     * right node varible.
-     */
-    protected Node right;
-    /**
-     * Constructs the object.
-     *
-     * @param      k     The key
-     * @param      val   The value
-     */
-    Node(final Book k, final int val) {
-        this.key = k;
-        this.value = val;
-    }
-
-}
-/**
  * Class for book.
  */
 class Book implements Comparable<Book> {
+    /**
+    * Class for node.
+    */
+    class Node {
+        /**
+         * key variable.
+         */
+        private Book key;
+        /**
+         * value variable.
+         */
+        private int value;
+        /**
+         * left node variable.
+         */
+        private Node left;
+        /**
+         * right node varible.
+         */
+        private Node right;
+        /**
+         * Constructs the object.
+         *
+         * @param      k     The key
+         * @param      val   The value
+         */
+        Node(final Book k, final int val) {
+            this.key = k;
+            this.value = val;
+        }
+    }
     /**
      * name variable.
      */
