@@ -74,19 +74,22 @@ public class Solution {
 	}
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		String[] tokens = s.nextLine().split(",");
 		BinarySearchTree<Book, Integer> bst = new BinarySearchTree<Book, Integer>();
 		Book book = new Book();
-		switch (tokens[0]) {
-			case "put":
-			book = new Book(tokens[1], tokens[2], Double.parseDouble(tokens[3]));
-			bst.put(book, Integer.parseInt(tokens[4]));
-			break;
-			case "get":
-			book = new Book(tokens[1], tokens[2], Double.parseDouble(tokens[3]));
-			System.out.println(bst.get(book));
-			default:
-			break;
+		while (s.hasNext()) {
+			String[] tokens = s.nextLine().split(",");
+			switch (tokens[0]) {
+				case "put":
+				book = new Book(tokens[1], tokens[2], Double.parseDouble(tokens[3]));
+				bst.put(book, Integer.parseInt(tokens[4]));
+				break;
+				case "get":
+				book = new Book(tokens[1], tokens[2], Double.parseDouble(tokens[3]));
+				System.out.println(bst.get(book));
+				default:
+				break;
 		}	
+		}
+		
 	}
 }
