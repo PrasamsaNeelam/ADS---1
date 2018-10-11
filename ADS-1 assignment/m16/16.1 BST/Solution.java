@@ -35,8 +35,17 @@ class Node {
  * Class for book.
  */
 class Book implements Comparable<Book> {
+    /**
+     * name variable.
+     */
     private String name;
+    /**
+     * author variable.
+     */
     private String author;
+    /**
+     * price variable.
+     */
     private Double price;
     /**
      * Constructs the object.
@@ -90,7 +99,7 @@ class BinarySearchTree<Key, Value> {
      */
     String get(final Book key) {
         Node x = root;
-        while(x != null) {
+        while (x != null) {
             int cmp = key.compareTo(x.key);
             if (cmp < 0) {
                 x = x.left;
@@ -128,7 +137,7 @@ class BinarySearchTree<Key, Value> {
         int cmp = key.compareTo(obj.key);
         if (cmp > 0) {
             obj.right = put(obj.right, key, val);
-        } else if(cmp < 0) {
+        } else if (cmp < 0) {
             obj.left = put(obj.left, key, val);
         } else {
             obj.value = val;
@@ -154,17 +163,22 @@ public final class Solution {
      */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
-        BinarySearchTree<Book, Integer> bst = new BinarySearchTree<Book, Integer>();
+        BinarySearchTree<Book, Integer> bst = new BinarySearchTree<Book,
+        Integer>();
         Book book = new Book();
+        int three = 3;
+        int four = 4;
         while (s.hasNext()) {
             String[] tokens = s.nextLine().split(",");
             switch (tokens[0]) {
                 case "put":
-                book = new Book(tokens[1], tokens[2], Double.parseDouble(tokens[3]));
-                bst.put(book, Integer.parseInt(tokens[4]));
+                book = new Book(tokens[1], tokens[2],
+                    Double.parseDouble(tokens[three]));
+                bst.put(book, Integer.parseInt(tokens[four]));
                 break;
                 case "get":
-                book = new Book(tokens[1], tokens[2], Double.parseDouble(tokens[3]));
+                book = new Book(tokens[1], tokens[2],
+                    Double.parseDouble(tokens[three]));
                 System.out.println(bst.get(book));
                 default:
                 break;
