@@ -84,7 +84,7 @@ public class Solution {
 			break;
 			case "get":
 			book = new Book(tokens[1], tokens[2], Double.parseDouble(tokens[3]));
-			bst.get(book);
+			System.out.println(bst.get(book));
 			default:
 			break;
 		}	
