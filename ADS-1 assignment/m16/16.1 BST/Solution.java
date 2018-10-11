@@ -44,7 +44,7 @@ class BinarySearchTree<Key, Value> {
 				return x.value;
 			}
 		}
-		return x.value;
+		return 0;
 	}
 
 	void put(Book key, int val) {
