@@ -32,19 +32,21 @@ class BinarySearchTree<Key, Value> {
 	BinarySearchTree() {
 
 	}
-	int get(Book key) {
+	String get(Book key) {
 		Node x = root;
 		while(x != null) {
+			System.out.println("Prassu");
 			int cmp = key.compareTo(x.key);
 			if (cmp < 0) {
 				x = x.left;
 			} else if (cmp > 0) {
 				x = x.right;
 			} else {
-				return x.value;
+				String str = String.valueOf(x.value);
+				return str;
 			}
 		}
-		return 0;
+		return null;
 	}
 
 	void put(Book key, int val) {
