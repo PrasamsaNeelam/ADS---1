@@ -35,7 +35,6 @@ class BinarySearchTree<Key, Value> {
 	String get(Book key) {
 		Node x = root;
 		while(x != null) {
-			System.out.println("Prassu");
 			int cmp = key.compareTo(x.key);
 			if (cmp < 0) {
 				x = x.left;

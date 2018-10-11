@@ -1,8 +1,7 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 1
 Your Output: 
-Prassu
 1
 ----------------------------------------
 ########## Testcase 1: Failed ##########
@@ -12,13 +11,9 @@ Expected Output:
 7
 2
 Your Output: 
-Prassu
 null
-Prassu
 null
-Prassu
 null
-Prassu
 null
 ----------------------------------------
 ########## Testcase 2: Failed ##########
@@ -26,8 +21,6 @@ Expected Output:
 null
 7
 Your Output: 
-Prassu
 null
-Prassu
 null
 ----------------------------------------
