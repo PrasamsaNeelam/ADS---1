@@ -1,5 +1,7 @@
 import java.util.Scanner;
-
+/**
+ * Class for taxicab.
+ */
 class Taxicab implements Comparable<Taxicab> {
     /**
      * { variables i & j }.
@@ -69,7 +71,9 @@ class Taxicab implements Comparable<Taxicab> {
         return i + "^3 + " + j + "^3";
     }
 }
-
+/**
+ * class for solution.
+ */
 final class Solution {
     /**
      * Constructs the object.

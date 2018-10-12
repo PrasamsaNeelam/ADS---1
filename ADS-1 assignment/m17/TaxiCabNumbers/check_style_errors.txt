@@ -1,5 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m17\TaxiCabNumbers\Solution.java:3: Missing a Javadoc comment. [JavadocType]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m17\TaxiCabNumbers\Solution.java:73: Missing a Javadoc comment. [JavadocType]
 Audit done.
-Checkstyle ends with 2 errors.
