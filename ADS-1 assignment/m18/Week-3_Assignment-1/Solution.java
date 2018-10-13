@@ -1,6 +1,36 @@
 import java.util.Scanner;
 
-class BinarySearchST<Key extends Comparable<Key>, Value> {
+/**
+ * Class for binary search ST.
+ *
+ * @param      <Key>    The key
+ * @param      <Value>  The value
+ */
+class BinarySearchST<Key extends Comparable<Key>, Value extends Comparable<Value>> {
+
+	class Stock {
+		private String stockName;
+		private float freq;
+		/**
+		 * Constructs the object.
+		 */
+		Stock() {
+
+		}
+		/**
+		 * Constructs the object.
+		 *
+		 * @param      name    The stock name
+		 * @param      freque  The frequency
+		 */
+		Stock(String name, float freque) {
+			this.stockName = name;
+			this.freq = freque;
+		}
+		public boolean compareTo(final Stock other) {
+        return this.freq > other.freq;
+    }
+}
     /**
      * array for keys.
      */
@@ -10,38 +40,33 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
      */
     private Value[] values;
     /**
-     * variable for size.
+     * size variable.
      */
     private int size;
     /**
      * Constructs the object.
      */
     BinarySearchST() { }
-    /**
-     * Constructs the object.
-     *
-     * @param      capacity  The capacity
-     */
-    BinarySearchST(final int capacity) {
-        keys = (Key[]) new Comparable[capacity];
-        values = (Value[]) new Object[capacity];
-        size = 0;
-    }
-    /**
-     * resize function.
-     *
-     * @param      capacity  The capacity
-     */
-    private void resize(final int capacity) {
-        Key[] tempkey = (Key[]) new Comparable[capacity];
-        Value[] tempval = (Value[]) new Object[capacity];
-        for (int i = 0; i < size; i++) {
-            tempkey[i] = keys[i];
-            tempval[i] = values[i];
-        }
-        keys = tempkey;
-        values = tempval;
-    }
+    // BinarySearchST(final int capacity) {
+    //     keys = (Key[]) new Comparable[capacity];
+    //     values = (Value[]) new Object[capacity];
+    //     size = 0;
+    // }
+    // /**
+    //  * resize function.
+    //  *
+    //  * @param      capacity  The capacity
+    //  */
+    // private void resize(final int capacity) {
+    //     Key[] tempkey = (Key[]) new Comparable[capacity];
+    //     Value[] tempval = (Value[]) new Object[capacity];
+    //     for (int i = 0; i < size; i++) {
+    //         tempkey[i] = keys[i];
+    //         tempval[i] = values[i];
+    //     }
+    //     keys = tempkey;
+    //     values = tempval;
+    // }
     /**
      * put function.
      *
@@ -63,9 +88,6 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
         if (r < size && keys[r].compareTo(key) == 0) {
             values[r] = value;
             return;
-        }
-        if (size == keys.length) {
-            resize(2 * keys.length);
         }
         for (int i = size; i > r; i--) {
             keys[i] = keys[i - 1];
@@ -237,6 +259,7 @@ public class Solution {
 		Scanner s = new Scanner(System.in);
 		int n = Integer.parseInt(s.nextLine());
 		BinarySearchST<String, Float> bst = new BinarySearchST<String, Float>();
+		Stock stock = new Stock();
 		while (s.hasNext()) {
 			String[] tokens = s.next().split(",");
 			bst.put(tokens[0], Float.parseFloat(tokens[1]));
@@ -245,11 +268,11 @@ public class Solution {
 				String[] data = s.next().split(",");
 				switch (data[0]) {
 				case "get":
-				bst.get(data[2]);
+				System.out.println(bst.get(data[2]));
 				break;
 				default:
 				break;
-			}
+			    }
 			}
 		}
 	}
