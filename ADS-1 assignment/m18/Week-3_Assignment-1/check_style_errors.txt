@@ -1,0 +1,12 @@
+Starting audit...
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m18\Week-3_Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m18\Week-3_Assignment-1\Solution.java:3: Missing a Javadoc comment. [JavadocType]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m18\Week-3_Assignment-1\Solution.java:230: Class Solution should be declared as final. [FinalClass]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m18\Week-3_Assignment-1\Solution.java:230: Missing a Javadoc comment. [JavadocType]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m18\Week-3_Assignment-1\Solution.java:232:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m18\Week-3_Assignment-1\Solution.java:232:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m18\Week-3_Assignment-1\Solution.java:236:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m18\Week-3_Assignment-1\Solution.java:236:33: Parameter args should be final. [FinalParameters]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m18\Week-3_Assignment-1\Solution.java:239: Line is longer than 80 characters (found 88). [LineLength]
+Audit done.
+Checkstyle ends with 9 errors.
