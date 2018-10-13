@@ -6,31 +6,47 @@ import java.util.Scanner;
  * @param      <Key>    The key
  * @param      <Value>  The value
  */
-class BinarySearchST<Key extends Comparable<Key>, Value extends Comparable<Value>> {
+class BinarySearchST<Key extends Comparable<Key>,
+    Value extends Comparable<Value>> {
+    /**
+     * Class for stock.
+     */
+    class Stock {
+        /**
+         * stock name variable.
+         */
+        private String stockName;
+        /**
+         * frequency variable.
+         */
+        private float freq;
+        /**
+         * Constructs the object.
+         */
+        Stock() {
 
-	class Stock {
-		private String stockName;
-		private float freq;
-		/**
-		 * Constructs the object.
-		 */
-		Stock() {
-
-		}
-		/**
-		 * Constructs the object.
-		 *
-		 * @param      name    The stock name
-		 * @param      freque  The frequency
-		 */
-		Stock(String name, float freque) {
-			this.stockName = name;
-			this.freq = freque;
-		}
-		public boolean compareTo(final Stock other) {
-        return this.freq > other.freq;
+        }
+        /**
+         * Constructs the object.
+         *
+         * @param      name    The stock name
+         * @param      freque  The frequency
+         */
+        Stock(final String name, final float freque) {
+            this.stockName = name;
+            this.freq = freque;
+        }
+        /**
+         * compares frequencies.
+         *
+         * @param      other  The other
+         *
+         * @return     { boolean }
+         */
+        public boolean compareTo(final Stock other) {
+            return this.freq > other.freq;
+        }
     }
-}
     /**
      * array for keys.
      */
@@ -47,26 +63,6 @@ class BinarySearchST<Key extends Comparable<Key>, Value extends Comparable<Value
      * Constructs the object.
      */
     BinarySearchST() { }
-    // BinarySearchST(final int capacity) {
-    //     keys = (Key[]) new Comparable[capacity];
-    //     values = (Value[]) new Object[capacity];
-    //     size = 0;
-    // }
-    // /**
-    //  * resize function.
-    //  *
-    //  * @param      capacity  The capacity
-    //  */
-    // private void resize(final int capacity) {
-    //     Key[] tempkey = (Key[]) new Comparable[capacity];
-    //     Value[] tempval = (Value[]) new Object[capacity];
-    //     for (int i = 0; i < size; i++) {
-    //         tempkey[i] = keys[i];
-    //         tempval[i] = values[i];
-    //     }
-    //     keys = tempkey;
-    //     values = tempval;
-    // }
     /**
      * put function.
      *
@@ -248,32 +244,40 @@ class BinarySearchST<Key extends Comparable<Key>, Value extends Comparable<Value
         }
     }
 }
+/**
+ * class for solution.
+ */
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
 
-public class Solution {
-
-	private Solution() {
-
-	}
-
-	public static void main(String[] args) {
-		Scanner s = new Scanner(System.in);
-		int n = Integer.parseInt(s.nextLine());
-		BinarySearchST<String, Float> bst = new BinarySearchST<String, Float>();
-		Stock stock = new Stock();
-		while (s.hasNext()) {
-			String[] tokens = s.next().split(",");
-			bst.put(tokens[0], Float.parseFloat(tokens[1]));
-			int input = s.nextInt();
-			while (s.hasNext()) {
-				String[] data = s.next().split(",");
-				switch (data[0]) {
-				case "get":
-				System.out.println(bst.get(data[2]));
-				break;
-				default:
-				break;
-			    }
-			}
-		}
-	}
+    }
+    /**
+     * Main function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = Integer.parseInt(s.nextLine());
+        BinarySearchST<String, Float> bst = new BinarySearchST<String, Float>();
+        Stock stock = new Stock();
+        while (s.hasNext()) {
+            String[] tokens = s.next().split(",");
+            bst.put(tokens[0], Float.parseFloat(tokens[1]));
+            int input = s.nextInt();
+            while (s.hasNext()) {
+                String[] data = s.next().split(",");
+                switch (data[0]) {
+                case "get":
+                    System.out.println(bst.get(data[2]));
+                    break;
+                default:
+                    break;
+                }
+            }
+        }
+    }
 }
