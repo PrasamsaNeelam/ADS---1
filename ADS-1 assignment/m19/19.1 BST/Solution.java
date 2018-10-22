@@ -489,7 +489,7 @@ final class Solution {
             case "put":
                 book = new Book(tokens[1], tokens[2],
                                 Float.parseFloat(tokens[2 + 1]));
-                bst.put(book, tokens[4]);
+                bst.put(book, tokens[2 + 2]);
                 break;
             case "get":
                 book = new Book(tokens[1], tokens[2],
