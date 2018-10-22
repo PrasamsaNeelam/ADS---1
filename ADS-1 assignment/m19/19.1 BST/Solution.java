@@ -1,83 +1,220 @@
+/**
+ * imports Scanner class.
+ */
 import java.util.Scanner;
+/**
+ * Class for book.
+ */
 class Book implements Comparable<Book> {
-	String name;
-	String author;
-	float price;
+	/**
+	 * varible for name.
+	 */
+	private String name;
+	/**
+	 * varible for author.
+	 */
+	private String author;
+	/**
+	 * varible for price.
+	 */
+	private float price;
+	/**
+	 * Constructs the object.
+	 */
 	Book() {
-		
+
 	}
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      name1    The name 1
+	 * @param      author1  The author 1
+	 * @param      price1   The price 1
+	 */
 	Book(String name1, String author1, float price1) {
 		this.name = name1;
 		this.author = author1;
 		this.price = price1;
 	}
-
+	/**
+	 * Gets the name.
+	 *
+	 * @return     The name.
+	 */
 	public String getName() {
         return name;
     }
-
+    /**
+     * Gets the author.
+     *
+     * @return     The author.
+     */
     public String getAuthor() {
     	return author;
     }
-
+    /**
+     * Gets the price.
+     *
+     * @return     The price.
+     */
     public float getPrice() {
     	return price;
     }
-
+    /**
+     * compares the objects.
+     *
+     * @param      other  The other
+     *
+     * @return     integer
+     */
 	public int compareTo(Book other) {
 		return this.name.compareTo(other.name);
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		return getName() + ", " + getAuthor() + ", " + getPrice();
 	}
 }
+/**
+ * Class for node.
+ */
 class Node {
-	Book key;
-	int value;
-	Node left;
-	Node right;
-	int count;
-	Node(Book key1, int value1, int count1) {
+	/**
+	 * varible for key.
+	 */
+	private Book key;
+	/**
+	 * varible for value.
+	 */
+	private int value;
+	/**
+	 * varible for left node.
+	 */
+	private Node left;
+	/**
+	 * varible for right node.
+	 */
+	private Node right;
+	/**
+	 * varible for count.
+	 */
+	private int count;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      key1    The key 1
+	 * @param      value1  The value 1
+	 * @param      count1  The count 1
+	 */
+	public Node(Book key1, int value1, int count1) {
 		this.key = key1;
 		this.value = value1;
 		this.count = count1;
 	}
+	/**
+	 * Gets the key.
+	 *
+	 * @return     The key.
+	 */
 	public Book getKey() {
         return key;
     }
+    /**
+     * Gets the value.
+     *
+     * @return     The value.
+     */
     public int getValue() {
         return value;
     }
+    /**
+     * Gets the left.
+     *
+     * @return     The left.
+     */
     public Node getLeft() {
         return left;
     }
+    /**
+     * Gets the right.
+     *
+     * @return     The right.
+     */
     public Node getRight() {
         return right;
     }
+    /**
+     * Gets the count.
+     *
+     * @return     The count.
+     */
     public int getCount() {
         return count;
     }
+    /**
+     * Sets the left.
+     *
+     * @param      left1  The left 1
+     */
     public void setLeft(final Node left1) {
         this.left = left1;
     }
+    /**
+     * Sets the right.
+     *
+     * @param      right1  The right 1
+     */
     public void setRight(final Node right1) {
         this.right = right1;
     }
+    /**
+     * Sets the value.
+     *
+     * @param      val   The value
+     */
     public void setValue(final int val) {
         this.value = val;
     }
+    /**
+     * Sets the count.
+     *
+     * @param      cnt   The count
+     */
     public void setCount(final int cnt) {
         this.count = cnt;
     }
 }
+/**
+ * Class for bst.
+ */
 class Bst {
+	/**
+	 * varible for root.
+	 */
 	private Node root;
+	/**
+	 * Constructs the object.
+	 */
 	Bst() {
 
 	}
+	/**
+	 * Determines if empty.
+	 *
+	 * @return     True if empty, False otherwise.
+	 */
 	public boolean isEmpty() {
         return count() == 0;
     }
+    /**
+     * keeps track of count.
+     *
+     * @return     { integer }
+     */
     public int count() {
         return count(root);
     }
@@ -88,12 +225,21 @@ class Bst {
             return x.getCount();
         }
     }
+    /**
+     * Determines whether key is present.
+     *
+     * @param      key   The key
+     *
+     * @return     { boolean }
+     */
     public boolean contains(final Book key) {
         return get(key) != 0;
     }
     /**
      * Method to insert the key.
+     *
      * Time complexity is O(1).
+     *
      * @param      key    The key
      * @param      value  The value
      */
@@ -238,16 +384,12 @@ class Bst {
      */
     public Book select(int k) {
         Node x = select(root, k);
-        //System.out.println(x);
         return x.getKey();
     }
-
     // Return key of rank k. 
     private Node select(Node x, int k) {
         if (x == null) return null;
-        //System.out.println(x.toString());
         int t = count(x.getLeft());
-        //System.out.println(t);
         if (t > k) {
             return select(x.getLeft(),  k);
         } 
@@ -259,10 +401,21 @@ class Bst {
         return x;
     }
 }
+/**
+ * Class for solution.
+ */
 class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	Solution() {
 
 	}
+	/**
+	 * main function.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		Bst bst = new Bst();
