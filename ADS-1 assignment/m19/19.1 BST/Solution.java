@@ -316,8 +316,11 @@ class Bst {
      * @return     { description_of_the_return_value }
      */
     private Node min(final Node x) {
-        if (x.getLeft() == null) return x;
-        else                return min(x.getLeft());
+        if (x.getLeft() == null) {
+            return x;
+        } else {
+            return min(x.getLeft());
+        }
     }
     /**
      * Returns the largest key in the symbol table.
@@ -335,8 +338,11 @@ class Bst {
      * @return     { description_of_the_return_value }
      */
     private Node max(final Node x) {
-        if (x.getRight() == null) return x;
-        else                 return max(x.getRight());
+        if (x.getRight() == null) {
+            return x;
+        } else {
+            return max(x.getRight());
+        }
     }
     /**
      * Returns the largest key in the symbol table less than or equal to.
@@ -347,8 +353,11 @@ class Bst {
      */
     public Book floor(final Book key) {
         Node x = floor(root, key);
-        if (x == null) return null;
-        else return x.getKey();
+        if (x == null) {
+            return null;
+        } else {
+            return x.getKey();
+        }
     }
     /**
      * Returns the largest key in the symbol table less than or equal to.
@@ -359,13 +368,22 @@ class Bst {
      * @return     { description_of_the_return_value }
      */
     private Node floor(final Node x, final Book key) {
-        if (x == null) return null;
+        if (x == null) {
+            return null;
+        }
         int cmp = key.compareTo(x.getKey());
-        if (cmp == 0) return x;
-        if (cmp <  0) return floor(x.getLeft(), key);
+        if (cmp == 0) {
+            return x;
+        }
+        if (cmp <  0) {
+            return floor(x.getLeft(), key);
+        }
         Node t = floor(x.getRight(), key);
-        if (t != null) return t;
-        else return x;
+        if (t != null) {
+            return t;
+        } else {
+            return x;
+        }
     }
     /**
      * Returns the smallest key in the symbol table greater than or equal to.
@@ -376,8 +394,11 @@ class Bst {
      */
     public Book ceiling(final Book key) {
         Node x = ceiling(root, key);
-        if (x == null) return null;
-        else return x.getKey();
+        if (x == null) {
+            return null;
+        } else {
+            return x.getKey();
+        }
     }
     /**
      * Returns the smallest key in the symbol table greater than or equal to.
@@ -388,13 +409,20 @@ class Bst {
      * @return     { description_of_the_return_value }
      */
     private Node ceiling(final Node x, final Book key) {
-        if (x == null) return null;
+        if (x == null) {
+            return null;
+        }
         int cmp = key.compareTo(x.getKey());
-        if (cmp == 0) return x;
+        if (cmp == 0) {
+            return x;
+        }
         if (cmp < 0) {
             Node t = ceiling(x.getLeft(), key);
-            if (t != null) return t;
-            else return x;
+            if (t != null) {
+                return t;
+            } else {
+                return x;
+            }
         }
         return ceiling(x.getRight(), key);
     }
@@ -420,7 +448,9 @@ class Bst {
      * @return     { description_of_the_return_value }
      */
     private Node select(final Node x, final int k) {
-        if (x == null) return null;
+        if (x == null) {
+            return null;
+        }
         int t = count(x.getLeft());
         if (t > k) {
             return select(x.getLeft(),  k);
@@ -428,8 +458,9 @@ class Bst {
         if (t < k) {
             return select(x.getRight(), k - t - 1);
         }
-        if (t == k)
+        if (t == k) {
             return x;
+        }
         return x;
     }
 }
