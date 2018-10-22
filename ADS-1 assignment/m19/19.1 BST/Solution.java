@@ -216,6 +216,13 @@ class Bst {
     public int count() {
         return count(root);
     }
+    /**
+     * keeps track of count.
+     *
+     * @param      x     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     private int count(final Node x) {
         if (x == null) {
             return 0;
@@ -296,48 +303,62 @@ class Bst {
     /**
      * Returns the smallest key in the symbol table.
      *
-     * @return the smallest key in the symbol table
-     *
+     * @return     { description_of_the_return_value }
      */
     public Book min() {
-
         return min(root).getKey();
     }
-
-    private Node min(Node x) {
+    /**
+     * Returns the minimum key in the symbol table.
+     *
+     * @param      x     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private Node min(final Node x) {
         if (x.getLeft() == null) return x;
         else                return min(x.getLeft());
     }
     /**
      * Returns the largest key in the symbol table.
      *
-     * @return the largest key in the symbol table
-     *
+     * @return     { description_of_the_return_value }
      */
     public Book max() {
-
         return max(root).getKey();
     }
-
-    private Node max(Node x) {
+    /**
+     * Returns the largest key in the symbol table.
+     *
+     * @param      x     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private Node max(final Node x) {
         if (x.getRight() == null) return x;
         else                 return max(x.getRight());
     }
     /**
-     * Returns the largest key in the symbol table less than or equal to {@code key}.
+     * Returns the largest key in the symbol table less than or equal to.
      *
-     * @param  key the key
-     * @return the largest key in the symbol table less than or equal to {@code key}
+     * @param      key   The key
      *
-     *
+     * @return     { description_of_the_return_value }
      */
-    public Book floor(Book key) {
+    public Book floor(final Book key) {
         Node x = floor(root, key);
         if (x == null) return null;
         else return x.getKey();
     }
-
-    private Node floor(Node x, Book key) {
+    /**
+     * Returns the largest key in the symbol table less than or equal to.
+     *
+     * @param      x     { parameter_description }
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private Node floor(final Node x, final Book key) {
         if (x == null) return null;
         int cmp = key.compareTo(x.getKey());
         if (cmp == 0) return x;
@@ -347,20 +368,26 @@ class Bst {
         else return x;
     }
     /**
-     * Returns the smallest key in the symbol table greater than or equal to {@code key}.
+     * Returns the smallest key in the symbol table greater than or equal to.
      *
-     * @param  key the key
-     * @return the smallest key in the symbol table greater than or equal to {@code key}
+     * @param      key   The key
      *
-     *
+     * @return     { description_of_the_return_value }
      */
-    public Book ceiling(Book key) {
+    public Book ceiling(final Book key) {
         Node x = ceiling(root, key);
         if (x == null) return null;
         else return x.getKey();
     }
-
-    private Node ceiling(Node x, Book key) {
+    /**
+     * Returns the smallest key in the symbol table greater than or equal to.
+     *
+     * @param      x     { parameter_description }
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private Node ceiling(final Node x, final Book key) {
         if (x == null) return null;
         int cmp = key.compareTo(x.getKey());
         if (cmp == 0) return x;
@@ -372,20 +399,27 @@ class Bst {
         return ceiling(x.getRight(), key);
     }
     /**
-     * Return the key in the symbol table whose rank is {@code k}.
+     * Return the key in the symbol table whose rank.
      * This is the (k+1)st smallest key in the symbol table.
      *
-     * @param  k the order statistic
-     * @return the key in the symbol table of rank {@code k}
-     * @throws IllegalArgumentException unless {@code k} is between 0 and
-     *        <em>n</em>–1
+     * @param      k     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
      */
-    public Book select(int k) {
+    public Book select(final int k) {
         Node x = select(root, k);
         return x.getKey();
     }
-    // Return key of rank k.
-    private Node select(Node x, int k) {
+    /**
+     * Return the key in the symbol table whose rank.
+     * This is the (k+1)st smallest key in the symbol table.
+     *
+     * @param      x     { parameter_description }
+     * @param      k     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private Node select(final Node x, final int k) {
         if (x == null) return null;
         int t = count(x.getLeft());
         if (t > k) {
@@ -402,7 +436,7 @@ class Bst {
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -414,7 +448,7 @@ class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         Bst bst = new Bst();
         Book book = new Book();
