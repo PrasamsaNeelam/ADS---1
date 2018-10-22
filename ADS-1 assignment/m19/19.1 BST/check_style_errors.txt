@@ -1,14 +1,8 @@
 Starting audit...
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:111:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:470:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:490: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:490:79: '3' is a magic number. [MagicNumber]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:491:38: '4' is a magic number. [MagicNumber]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:494: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:494:79: '3' is a magic number. [MagicNumber]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:507: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:507:79: '3' is a magic number. [MagicNumber]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:511: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:511:79: '3' is a magic number. [MagicNumber]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:491:57: '3' is a magic number. [MagicNumber]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:492:38: '4' is a magic number. [MagicNumber]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:496:57: '3' is a magic number. [MagicNumber]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:511:57: '3' is a magic number. [MagicNumber]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:516:57: '3' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 11 errors.
+Checkstyle ends with 5 errors.

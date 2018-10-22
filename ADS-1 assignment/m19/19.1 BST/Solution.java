@@ -108,7 +108,7 @@ class Node {
      * @param      value1  The value 1
      * @param      count1  The count 1
      */
-    public Node(final Book key1, final String value1, final int count1) {
+    Node(final Book key1, final String value1, final int count1) {
         this.key = key1;
         this.value = value1;
         this.count = count1;
@@ -471,7 +471,7 @@ final class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
 
     }
     /**
@@ -487,11 +487,13 @@ final class Solution {
             String[] tokens = s.nextLine().split(",");
             switch (tokens[0]) {
             case "put":
-                book = new Book(tokens[1], tokens[2], Float.parseFloat(tokens[3]));
+                book = new Book(tokens[1], tokens[2],
+                                Float.parseFloat(tokens[3]));
                 bst.put(book, tokens[4]);
                 break;
             case "get":
-                book = new Book(tokens[1], tokens[2], Float.parseFloat(tokens[3]));
+                book = new Book(tokens[1], tokens[2],
+                                Float.parseFloat(tokens[3]));
                 System.out.println(bst.get(book));
                 break;
             case "max":
@@ -501,14 +503,17 @@ final class Solution {
                 System.out.println(bst.min());
                 break;
             case "select":
-                System.out.println(bst.select(Integer.parseInt(tokens[1])));
+                System.out.println(bst.select(
+                                       Integer.parseInt(tokens[1])));
                 break;
             case "floor":
-                book = new Book(tokens[1], tokens[2], Float.parseFloat(tokens[3]));
+                book = new Book(tokens[1], tokens[2],
+                                Float.parseFloat(tokens[3]));
                 System.out.println(bst.floor(book));
                 break;
             case "ceiling":
-                book = new Book(tokens[1], tokens[2], Float.parseFloat(tokens[3]));
+                book = new Book(tokens[1], tokens[2],
+                                Float.parseFloat(tokens[3]));
                 System.out.println(bst.ceiling(book));
                 break;
             default:
