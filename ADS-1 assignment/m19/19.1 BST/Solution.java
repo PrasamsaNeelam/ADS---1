@@ -21,9 +21,7 @@ class Book implements Comparable<Book> {
     /**
      * Constructs the object.
      */
-    Book() {
-
-    }
+    Book() { }
     /**
      * Constructs the object.
      *
@@ -31,7 +29,7 @@ class Book implements Comparable<Book> {
      * @param      author1  The author 1
      * @param      price1   The price 1
      */
-    Book(String name1, String author1, float price1) {
+    Book(final String name1, final String author1, final float price1) {
         this.name = name1;
         this.author = author1;
         this.price = price1;
@@ -67,7 +65,7 @@ class Book implements Comparable<Book> {
      *
      * @return     integer
      */
-    public int compareTo(Book other) {
+    public int compareTo(final Book other) {
         return this.name.compareTo(other.name);
     }
     /**
@@ -110,7 +108,7 @@ class Node {
      * @param      value1  The value 1
      * @param      count1  The count 1
      */
-    public Node(Book key1, String value1, int count1) {
+    public Node(final Book key1, final String value1, final int count1) {
         this.key = key1;
         this.value = value1;
         this.count = count1;
@@ -299,62 +297,62 @@ class Bst {
      * Returns the smallest key in the symbol table.
      *
      * @return the smallest key in the symbol table
-     * 
+     *
      */
     public Book min() {
 
         return min(root).getKey();
-    } 
+    }
 
-    private Node min(Node x) { 
-        if (x.getLeft() == null) return x; 
-        else                return min(x.getLeft()); 
+    private Node min(Node x) {
+        if (x.getLeft() == null) return x;
+        else                return min(x.getLeft());
     }
     /**
      * Returns the largest key in the symbol table.
      *
      * @return the largest key in the symbol table
-     * 
+     *
      */
     public Book max() {
 
         return max(root).getKey();
-    } 
+    }
 
     private Node max(Node x) {
-        if (x.getRight() == null) return x; 
-        else                 return max(x.getRight()); 
+        if (x.getRight() == null) return x;
+        else                 return max(x.getRight());
     }
     /**
      * Returns the largest key in the symbol table less than or equal to {@code key}.
      *
      * @param  key the key
      * @return the largest key in the symbol table less than or equal to {@code key}
-     * 
-     * 
+     *
+     *
      */
     public Book floor(Book key) {
         Node x = floor(root, key);
         if (x == null) return null;
         else return x.getKey();
-    } 
+    }
 
     private Node floor(Node x, Book key) {
         if (x == null) return null;
         int cmp = key.compareTo(x.getKey());
         if (cmp == 0) return x;
         if (cmp <  0) return floor(x.getLeft(), key);
-        Node t = floor(x.getRight(), key); 
+        Node t = floor(x.getRight(), key);
         if (t != null) return t;
-        else return x; 
+        else return x;
     }
     /**
      * Returns the smallest key in the symbol table greater than or equal to {@code key}.
      *
      * @param  key the key
      * @return the smallest key in the symbol table greater than or equal to {@code key}
-     * 
-     * 
+     *
+     *
      */
     public Book ceiling(Book key) {
         Node x = ceiling(root, key);
@@ -366,12 +364,12 @@ class Bst {
         if (x == null) return null;
         int cmp = key.compareTo(x.getKey());
         if (cmp == 0) return x;
-        if (cmp < 0) { 
-            Node t = ceiling(x.getLeft(), key); 
+        if (cmp < 0) {
+            Node t = ceiling(x.getLeft(), key);
             if (t != null) return t;
-            else return x; 
-        } 
-        return ceiling(x.getRight(), key); 
+            else return x;
+        }
+        return ceiling(x.getRight(), key);
     }
     /**
      * Return the key in the symbol table whose rank is {@code k}.
@@ -386,17 +384,17 @@ class Bst {
         Node x = select(root, k);
         return x.getKey();
     }
-    // Return key of rank k. 
+    // Return key of rank k.
     private Node select(Node x, int k) {
         if (x == null) return null;
         int t = count(x.getLeft());
         if (t > k) {
             return select(x.getLeft(),  k);
-        } 
-        if (t < k) {
-            return select(x.getRight(), k - t - 1); 
         }
-        if(t==k)
+        if (t < k) {
+            return select(x.getRight(), k - t - 1);
+        }
+        if (t == k)
             return x;
         return x;
     }
@@ -422,33 +420,33 @@ class Solution {
         Book book = new Book();
         while (s.hasNext()) {
             String[] tokens = s.nextLine().split(",");
-            switch(tokens[0]) {
-                case "put":
+            switch (tokens[0]) {
+            case "put":
                 book = new Book(tokens[1], tokens[2], Float.parseFloat(tokens[3]));
                 bst.put(book, tokens[4]);
                 break;
-                case "get":
+            case "get":
                 book = new Book(tokens[1], tokens[2], Float.parseFloat(tokens[3]));
                 System.out.println(bst.get(book));
                 break;
-                case "max":
+            case "max":
                 System.out.println(bst.max());
                 break;
-                case "min":
+            case "min":
                 System.out.println(bst.min());
                 break;
-                case "select":
+            case "select":
                 System.out.println(bst.select(Integer.parseInt(tokens[1])));
                 break;
-                case "floor":
+            case "floor":
                 book = new Book(tokens[1], tokens[2], Float.parseFloat(tokens[3]));
                 System.out.println(bst.floor(book));
                 break;
-                case "ceiling":
+            case "ceiling":
                 book = new Book(tokens[1], tokens[2], Float.parseFloat(tokens[3]));
                 System.out.println(bst.ceiling(book));
                 break;
-                default:
+            default:
                 break;
             }
         }
