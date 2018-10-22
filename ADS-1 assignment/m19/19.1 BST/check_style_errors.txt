@@ -1,8 +1,4 @@
 Starting audit...
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:491:57: '3' is a magic number. [MagicNumber]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:492:38: '4' is a magic number. [MagicNumber]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:496:57: '3' is a magic number. [MagicNumber]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:511:57: '3' is a magic number. [MagicNumber]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m19\19.1 BST\Solution.java:516:57: '3' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 5 errors.
+Checkstyle ends with 1 errors.

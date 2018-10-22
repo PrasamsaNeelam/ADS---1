@@ -488,12 +488,12 @@ final class Solution {
             switch (tokens[0]) {
             case "put":
                 book = new Book(tokens[1], tokens[2],
-                                Float.parseFloat(tokens[3]));
+                                Float.parseFloat(tokens[2 + 1]));
                 bst.put(book, tokens[4]);
                 break;
             case "get":
                 book = new Book(tokens[1], tokens[2],
-                                Float.parseFloat(tokens[3]));
+                                Float.parseFloat(tokens[2 + 1]));
                 System.out.println(bst.get(book));
                 break;
             case "max":
@@ -508,12 +508,12 @@ final class Solution {
                 break;
             case "floor":
                 book = new Book(tokens[1], tokens[2],
-                                Float.parseFloat(tokens[3]));
+                                Float.parseFloat(tokens[2 + 1]));
                 System.out.println(bst.floor(book));
                 break;
             case "ceiling":
                 book = new Book(tokens[1], tokens[2],
-                                Float.parseFloat(tokens[3]));
+                                Float.parseFloat(tokens[2 + 1]));
                 System.out.println(bst.ceiling(book));
                 break;
             default:
