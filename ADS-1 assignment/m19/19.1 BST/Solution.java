@@ -6,42 +6,42 @@ import java.util.Scanner;
  * Class for book.
  */
 class Book implements Comparable<Book> {
-	/**
-	 * varible for name.
-	 */
-	private String name;
-	/**
-	 * varible for author.
-	 */
-	private String author;
-	/**
-	 * varible for price.
-	 */
-	private float price;
-	/**
-	 * Constructs the object.
-	 */
-	Book() {
+    /**
+     * varible for name.
+     */
+    private String name;
+    /**
+     * varible for author.
+     */
+    private String author;
+    /**
+     * varible for price.
+     */
+    private float price;
+    /**
+     * Constructs the object.
+     */
+    Book() {
 
-	}
-	/**
-	 * Constructs the object.
-	 *
-	 * @param      name1    The name 1
-	 * @param      author1  The author 1
-	 * @param      price1   The price 1
-	 */
-	Book(String name1, String author1, float price1) {
-		this.name = name1;
-		this.author = author1;
-		this.price = price1;
-	}
-	/**
-	 * Gets the name.
-	 *
-	 * @return     The name.
-	 */
-	public String getName() {
+    }
+    /**
+     * Constructs the object.
+     *
+     * @param      name1    The name 1
+     * @param      author1  The author 1
+     * @param      price1   The price 1
+     */
+    Book(String name1, String author1, float price1) {
+        this.name = name1;
+        this.author = author1;
+        this.price = price1;
+    }
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
+    public String getName() {
         return name;
     }
     /**
@@ -50,7 +50,7 @@ class Book implements Comparable<Book> {
      * @return     The author.
      */
     public String getAuthor() {
-    	return author;
+        return author;
     }
     /**
      * Gets the price.
@@ -58,7 +58,7 @@ class Book implements Comparable<Book> {
      * @return     The price.
      */
     public float getPrice() {
-    	return price;
+        return price;
     }
     /**
      * compares the objects.
@@ -67,60 +67,60 @@ class Book implements Comparable<Book> {
      *
      * @return     integer
      */
-	public int compareTo(Book other) {
-		return this.name.compareTo(other.name);
-	}
-	/**
-	 * Returns a string representation of the object.
-	 *
-	 * @return     String representation of the object.
-	 */
-	public String toString() {
-		return getName() + ", " + getAuthor() + ", " + getPrice();
-	}
+    public int compareTo(Book other) {
+        return this.name.compareTo(other.name);
+    }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
+    public String toString() {
+        return getName() + ", " + getAuthor() + ", " + getPrice();
+    }
 }
 /**
  * Class for node.
  */
 class Node {
-	/**
-	 * varible for key.
-	 */
-	private Book key;
-	/**
-	 * varible for value.
-	 */
-	private int value;
-	/**
-	 * varible for left node.
-	 */
-	private Node left;
-	/**
-	 * varible for right node.
-	 */
-	private Node right;
-	/**
-	 * varible for count.
-	 */
-	private int count;
-	/**
-	 * Constructs the object.
-	 *
-	 * @param      key1    The key 1
-	 * @param      value1  The value 1
-	 * @param      count1  The count 1
-	 */
-	public Node(Book key1, int value1, int count1) {
-		this.key = key1;
-		this.value = value1;
-		this.count = count1;
-	}
-	/**
-	 * Gets the key.
-	 *
-	 * @return     The key.
-	 */
-	public Book getKey() {
+    /**
+     * varible for key.
+     */
+    private Book key;
+    /**
+     * varible for value.
+     */
+    private String value;
+    /**
+     * varible for left node.
+     */
+    private Node left;
+    /**
+     * varible for right node.
+     */
+    private Node right;
+    /**
+     * varible for count.
+     */
+    private int count;
+    /**
+     * Constructs the object.
+     *
+     * @param      key1    The key 1
+     * @param      value1  The value 1
+     * @param      count1  The count 1
+     */
+    public Node(Book key1, String value1, int count1) {
+        this.key = key1;
+        this.value = value1;
+        this.count = count1;
+    }
+    /**
+     * Gets the key.
+     *
+     * @return     The key.
+     */
+    public Book getKey() {
         return key;
     }
     /**
@@ -128,7 +128,7 @@ class Node {
      *
      * @return     The value.
      */
-    public int getValue() {
+    public String getValue() {
         return value;
     }
     /**
@@ -176,7 +176,7 @@ class Node {
      *
      * @param      val   The value
      */
-    public void setValue(final int val) {
+    public void setValue(final String val) {
         this.value = val;
     }
     /**
@@ -192,22 +192,22 @@ class Node {
  * Class for bst.
  */
 class Bst {
-	/**
-	 * varible for root.
-	 */
-	private Node root;
-	/**
-	 * Constructs the object.
-	 */
-	Bst() {
+    /**
+     * varible for root.
+     */
+    private Node root;
+    /**
+     * Constructs the object.
+     */
+    Bst() {
 
-	}
-	/**
-	 * Determines if empty.
-	 *
-	 * @return     True if empty, False otherwise.
-	 */
-	public boolean isEmpty() {
+    }
+    /**
+     * Determines if empty.
+     *
+     * @return     True if empty, False otherwise.
+     */
+    public boolean isEmpty() {
         return count() == 0;
     }
     /**
@@ -233,7 +233,7 @@ class Bst {
      * @return     { boolean }
      */
     public boolean contains(final Book key) {
-        return get(key) != 0;
+        return get(key) != null;
     }
     /**
      * Method to insert the key.
@@ -243,7 +243,7 @@ class Bst {
      * @param      key    The key
      * @param      value  The value
      */
-    public void put(final Book key, final int value) {
+    public void put(final Book key, final String value) {
         root = put(root, key, value);
     }
     /**
@@ -255,7 +255,7 @@ class Bst {
      *
      * @return     The node.
      */
-    public Node put(final Node x, final Book key, final int value) {
+    public Node put(final Node x, final Book key, final String value) {
         if (x == null) {
             return new Node(key, value, 1);
         }
@@ -279,7 +279,7 @@ class Bst {
      *
      * @return     The value of the key
      */
-    public int get(final Book key) {
+    public String get(final Book key) {
         Node x = root;
         while (x != null) {
             int cmp = key.getName().compareTo(x.getKey().getName());
@@ -293,7 +293,7 @@ class Bst {
                 return x.getValue();
             }
         }
-        return 0;
+        return null;
     }
     /**
      * Returns the smallest key in the symbol table.
@@ -397,7 +397,7 @@ class Bst {
             return select(x.getRight(), k - t - 1); 
         }
         if(t==k)
-        	return x;
+            return x;
         return x;
     }
 }
@@ -405,34 +405,34 @@ class Bst {
  * Class for solution.
  */
 class Solution {
-	/**
-	 * Constructs the object.
-	 */
-	Solution() {
+    /**
+     * Constructs the object.
+     */
+    Solution() {
 
-	}
-	/**
-	 * main function.
-	 *
-	 * @param      args  The arguments
-	 */
-	public static void main(String[] args) {
-		Scanner s = new Scanner(System.in);
-		Bst bst = new Bst();
-		Book book = new Book();
-		while (s.hasNext()) {
-			String[] tokens = s.nextLine().split(",");
-			switch(tokens[0]) {
-				case "put":
-				book = new Book(tokens[1], tokens[2], Float.parseFloat(tokens[3]));
-				bst.put(book, Integer.parseInt(tokens[4]));
-				break;
-				case "get":
-				book = new Book(tokens[1], tokens[2], Float.parseFloat(tokens[3]));
-				System.out.println(bst.get(book));
-				break;
-				case "max":
-				System.out.println(bst.max());
+    }
+    /**
+     * main function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        Bst bst = new Bst();
+        Book book = new Book();
+        while (s.hasNext()) {
+            String[] tokens = s.nextLine().split(",");
+            switch(tokens[0]) {
+                case "put":
+                book = new Book(tokens[1], tokens[2], Float.parseFloat(tokens[3]));
+                bst.put(book, tokens[4]);
+                break;
+                case "get":
+                book = new Book(tokens[1], tokens[2], Float.parseFloat(tokens[3]));
+                System.out.println(bst.get(book));
+                break;
+                case "max":
+                System.out.println(bst.max());
                 break;
                 case "min":
                 System.out.println(bst.min());
@@ -450,7 +450,7 @@ class Solution {
                 break;
                 default:
                 break;
-			}
-		}
-	}
+            }
+        }
+    }
 }
