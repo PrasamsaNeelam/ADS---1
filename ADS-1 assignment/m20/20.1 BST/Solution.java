@@ -529,13 +529,15 @@ class Bst {
         int cmp = key.compareTo(x.getKey());
         if (cmp < 0) {
             x.setLeft(delete(x.getLeft(), key));
-        }
-        else if (cmp > 0) {
+        } else if (cmp > 0) {
             x.setRight(delete(x.getRight(), key));
-        }
-        else {
-            if (x.getRight() == null) return x.getLeft();
-            if (x.getLeft()  == null) return x.getRight();
+        } else {
+            if (x.getRight() == null) {
+                return x.getLeft();
+            }
+            if (x.getLeft()  == null) {
+                return x.getRight();
+            }
             Node t = x;
             n = min(t.getRight());
             x.setRight(deleteMin(t.getRight()));
