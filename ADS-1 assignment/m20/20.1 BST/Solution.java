@@ -219,9 +219,9 @@ class Bst {
     /**
      * keeps track of count.
      *
-     * @param      x     { parameter_description }
+     * @param      x     { Node }
      *
-     * @return     { description_of_the_return_value }
+     * @return     { Node type }
      */
     private int count(final Node x) {
         if (x == null) {
@@ -243,7 +243,7 @@ class Bst {
     /**
      * Method to insert the key.
      *
-     * Time complexity is O(1).
+     * Time complexity is O(N).
      *
      * @param      key    The key
      * @param      value  The value
@@ -303,17 +303,19 @@ class Bst {
     /**
      * Returns the smallest key in the symbol table.
      *
-     * @return     { description_of_the_return_value }
+     * Time complexity of this method is O(N). 
+     *
+     * @return     { Book type }
      */
     public Book min() {
         return min(root).getKey();
     }
     /**
      * Returns the minimum key in the symbol table.
+     * 
+     * @param      x     { Node }
      *
-     * @param      x     { parameter_description }
-     *
-     * @return     { description_of_the_return_value }
+     * @return     { Node type }
      */
     private Node min(final Node x) {
         if (x.getLeft() == null) {
@@ -325,6 +327,8 @@ class Bst {
     /**
      * Returns the largest key in the symbol table.
      *
+     * Time complexity of this method is O(N).
+     *
      * @return     { description_of_the_return_value }
      */
     public Book max() {
@@ -333,9 +337,9 @@ class Bst {
     /**
      * Returns the largest key in the symbol table.
      *
-     * @param      x     { parameter_description }
+     * @param      x     { Node }
      *
-     * @return     { description_of_the_return_value }
+     * @return     { Node type }
      */
     private Node max(final Node x) {
         if (x.getRight() == null) {
@@ -347,9 +351,11 @@ class Bst {
     /**
      * Returns the largest key in the symbol table less than or equal to.
      *
+     * Time complexity of this method is O(N).
+     *
      * @param      key   The key
      *
-     * @return     { description_of_the_return_value }
+     * @return     { Book type }
      */
     public Book floor(final Book key) {
         Node x = floor(root, key);
@@ -362,10 +368,10 @@ class Bst {
     /**
      * Returns the largest key in the symbol table less than or equal to.
      *
-     * @param      x     { parameter_description }
+     * @param      x     The node
      * @param      key   The key
      *
-     * @return     { description_of_the_return_value }
+     * @return     { Node type }
      */
     private Node floor(final Node x, final Book key) {
         if (x == null) {
@@ -388,9 +394,11 @@ class Bst {
     /**
      * Returns the smallest key in the symbol table greater than or equal to.
      *
+     * Time complexity of this method is O(N). 
+     *
      * @param      key   The key
      *
-     * @return     { description_of_the_return_value }
+     * @return     { Book type }
      */
     public Book ceiling(final Book key) {
         Node x = ceiling(root, key);
@@ -403,10 +411,12 @@ class Bst {
     /**
      * Returns the smallest key in the symbol table greater than or equal to.
      *
-     * @param      x     { parameter_description }
+     * Time complexity of this method is O(N).
+     *
+     * @param      x     The node
      * @param      key   The key
      *
-     * @return     { description_of_the_return_value }
+     * @return     { Node type }
      */
     private Node ceiling(final Node x, final Book key) {
         if (x == null) {
@@ -428,6 +438,7 @@ class Bst {
     }
     /**
      * Return the key in the symbol table whose rank.
+     *
      * This is the (k+1)st smallest key in the symbol table.
      *
      * @param      k     { parameter_description }
@@ -440,6 +451,7 @@ class Bst {
     }
     /**
      * Return the key in the symbol table whose rank.
+     *
      * This is the (k+1)st smallest key in the symbol table.
      *
      * @param      x     { parameter_description }
@@ -465,12 +477,15 @@ class Bst {
     }
     /**
      * To delete the minimum node.
+     * 
+     * Time complexity of this method is O(1).
      */
     public void deleteMin() {
         root = deleteMin(root);
     }
     /**
      * To delete the minimum node.
+     * Time complexity of this method is O(N).
      *
      * @param      x     { Node }
      *
@@ -486,12 +501,16 @@ class Bst {
     }
     /**
      * To delete the maximum node.
+     *
+     * Time complexity of this method is O(1).
      */
     public void deleteMax() {
         root = deleteMax(root);
     }
     /**
      * To delete the maximum node.
+     *
+     * Time complexity of this method is O(N).
      *
      * @param      x     { Node }
      *
@@ -515,6 +534,8 @@ class Bst {
     }
     /**
      * Function to delete a node.
+     *
+     * Time complexity of this method is O(N).
      *
      * @param      x     { Node }
      * @param      key   The key
