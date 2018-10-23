@@ -303,7 +303,7 @@ class Bst {
     /**
      * Returns the smallest key in the symbol table.
      *
-     * Time complexity of this method is O(N). 
+     * Time complexity of this method is O(N).
      *
      * @return     { Book type }
      */
@@ -312,7 +312,7 @@ class Bst {
     }
     /**
      * Returns the minimum key in the symbol table.
-     * 
+     *
      * @param      x     { Node }
      *
      * @return     { Node type }
@@ -394,7 +394,7 @@ class Bst {
     /**
      * Returns the smallest key in the symbol table greater than or equal to.
      *
-     * Time complexity of this method is O(N). 
+     * Time complexity of this method is O(N).
      *
      * @param      key   The key
      *
@@ -477,7 +477,7 @@ class Bst {
     }
     /**
      * To delete the minimum node.
-     * 
+     *
      * Time complexity of this method is O(1).
      */
     public void deleteMin() {
