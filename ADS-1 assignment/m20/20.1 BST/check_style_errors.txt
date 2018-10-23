@@ -1,14 +1,7 @@
 Starting audit...
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m20\20.1 BST\Solution.java:479:28: Parameter x should be final. [FinalParameters]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m20\20.1 BST\Solution.java:500:28: Parameter x should be final. [FinalParameters]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m20\20.1 BST\Solution.java:501: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m20\20.1 BST\Solution.java:511:24: Parameter key should be final. [FinalParameters]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m20\20.1 BST\Solution.java:522:25: Parameter x should be final. [FinalParameters]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m20\20.1 BST\Solution.java:522:33: Parameter key should be final. [FinalParameters]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m20\20.1 BST\Solution.java:523: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m20\20.1 BST\Solution.java:526: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m20\20.1 BST\Solution.java:527: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m20\20.1 BST\Solution.java:529: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m20\20.1 BST\Solution.java:530: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m20\20.1 BST\Solution.java:532:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m20\20.1 BST\Solution.java:535:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m20\20.1 BST\Solution.java:537: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m20\20.1 BST\Solution.java:538: 'if' construct must use '{}'s. [NeedBraces]
 Audit done.
-Checkstyle ends with 11 errors.
+Checkstyle ends with 4 errors.

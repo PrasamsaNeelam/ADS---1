@@ -476,7 +476,7 @@ class Bst {
      *
      * @return     { Node type }
      */
-    private Node deleteMin(Node x) {
+    private Node deleteMin(final Node x) {
         if (x.getLeft() == null) {
             return x.getRight();
         }
@@ -497,8 +497,10 @@ class Bst {
      *
      * @return     { Node type }
      */
-    private Node deleteMax(Node x) {
-        if (x.getRight() == null) return x.getLeft();
+    private Node deleteMax(final Node x) {
+        if (x.getRight() == null) {
+            return x.getLeft();
+        }
         x.setRight(deleteMax(x.getRight()));
         x.setCount(count(x.getLeft()) + count(x.getRight()) + 1);
         return x;
@@ -508,7 +510,7 @@ class Bst {
      *
      * @param      key   The key
      */
-    public void delete(Book key) {
+    public void delete(final Book key) {
         root = delete(root, key);
     }
     /**
@@ -519,22 +521,28 @@ class Bst {
      *
      * @return     { Node type }
      */
-    private Node delete(Node x, Book key) {
-        if (x == null) return null;
-
+    private Node delete(final Node x, final Book key) {
+        Node n = x;
+        if (n == null) {
+            return null;
+        }
         int cmp = key.compareTo(x.getKey());
-        if      (cmp < 0) x.setLeft(delete(x.getLeft(), key));
-        else if (cmp > 0) x.setRight(delete(x.getRight(), key));
+        if (cmp < 0) {
+            x.setLeft(delete(x.getLeft(), key));
+        }
+        else if (cmp > 0) {
+            x.setRight(delete(x.getRight(), key));
+        }
         else {
             if (x.getRight() == null) return x.getLeft();
             if (x.getLeft()  == null) return x.getRight();
             Node t = x;
-            x = min(t.getRight());
+            n = min(t.getRight());
             x.setRight(deleteMin(t.getRight()));
             x.setLeft(t.getLeft());
         }
         x.setCount(count(x.getLeft()) + count(x.getRight()) + 1);
-        return x;
+        return n;
     }
 }
 /**
