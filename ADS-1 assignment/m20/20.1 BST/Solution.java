@@ -463,10 +463,19 @@ class Bst {
         }
         return x;
     }
-
+    /**
+     * To delete the minimum node.
+     */
     public void deleteMin() {
         root = deleteMin(root);
     }
+    /**
+     * To delete the minimum node.
+     *
+     * @param      x     { Node }
+     *
+     * @return     { Node type }
+     */
     private Node deleteMin(Node x) {
         if (x.getLeft() == null) {
             return x.getRight();
@@ -475,20 +484,41 @@ class Bst {
         x.setCount(count(x.getLeft()) + count(x.getRight()) + 1);
         return x;
     }
-
+    /**
+     * To delete the maximum node.
+     */
     public void deleteMax() {
         root = deleteMax(root);
     }
+    /**
+     * To delete the maximum node.
+     *
+     * @param      x     { Node }
+     *
+     * @return     { Node type }
+     */
     private Node deleteMax(Node x) {
         if (x.getRight() == null) return x.getLeft();
         x.setRight(deleteMax(x.getRight()));
         x.setCount(count(x.getLeft()) + count(x.getRight()) + 1);
         return x;
     }
-
+    /**
+     * Function to delete a node.
+     *
+     * @param      key   The key
+     */
     public void delete(Book key) {
         root = delete(root, key);
     }
+    /**
+     * Function to delete a node.
+     *
+     * @param      x     { Node }
+     * @param      key   The key
+     *
+     * @return     { Node type }
+     */
     private Node delete(Node x, Book key) {
         if (x == null) return null;
 
