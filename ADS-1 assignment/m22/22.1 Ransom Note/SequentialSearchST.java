@@ -136,9 +136,6 @@ public class SequentialSearchST<Key, Value> {
         if (key == null) throw new IllegalArgumentException("argument to delete() is null"); 
         first = delete(first, key);
     }
-
-    // delete key in linked list beginning at Node x
-    // warning: function call stack too large if table is large
     private Node delete(Node x, Key key) {
         if (x == null) return null;
         if (key.equals(x.key)) {
@@ -148,20 +145,4 @@ public class SequentialSearchST<Key, Value> {
         x.next = delete(x.next, key);
         return x;
     }
-
-
-    /**
-     * Returns all keys in the symbol table as an {@code Iterable}.
-     * To iterate over all of the keys in the symbol table named {@code st},
-     * use the foreach notation: {@code for (Key key : st.keys())}.
-     *
-     * @return all keys in the symbol table
-     */
-    // public Iterable<Key> keys()  {
-    //     Queue<Key> queue = new Queue<Key>();
-    //     for (Node x = first; x != null; x = x.next)
-    //         queue.enqueue(x.key);
-    //     return queue;
-    // }
-
-    }
+}
