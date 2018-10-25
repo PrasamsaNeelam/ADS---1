@@ -1,115 +1,136 @@
+
 /**
- *  The {@code SequentialSearchST} class represents an (unordered)
- *  symbol table of generic key-value pairs.
- *  It supports the usual <em>put</em>, <em>get</em>, <em>contains</em>,
- *  <em>delete</em>, <em>size</em>, and <em>is-empty</em> methods.
- *  It also provides a <em>keys</em> method for iterating over all of the keys.
- *  A symbol table implements the <em>associative array</em> abstraction:
- *  when associating a value with a key that is already in the symbol table,
- *  the convention is to replace the old value with the new value.
- *  The class also uses the convention that values cannot be {@code null}. Setting the
- *  value associated with a key to {@code null} is equivalent to deleting the key
- *  from the symbol table.
- *  <p>
- *  This implementation uses a singly-linked list and sequential search.
- *  It relies on the {@code equals()} method to test whether two keys
- *  are equal. It does not call either the {@code compareTo()} or
- *  {@code hashCode()} method. 
- *  The <em>put</em> and <em>delete</em> operations take linear time; the
- *  <em>get</em> and <em>contains</em> operations takes linear time in the worst case.
- *  The <em>size</em>, and <em>is-empty</em> operations take constant time.
- *  Construction takes constant time.
- *  <p>
- *  For additional documentation, see <a href="https://algs4.cs.princeton.edu/31elementary">Section 3.1</a> of
- *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
+ * Class for sequential search st.
  *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
+ * @param      <Key>    The key
+ * @param      <Value>  The value
  */
-public class SequentialSearchST<Key, Value> {
-    private int n;           // number of key-value pairs
-    private Node first;      // the linked list of key-value pairs
-
-    // a helper linked list data type
+class SequentialSearchST<Key, Value> {
+    /**
+     * { variable for number of key-value pairs }.
+     */
+    private int n;
+    /**
+     * { the linked list of key-value pairs }.
+     */
+    private Node first;
+    /**
+     * Class for node.
+     * a helper linked list data type
+     */
     private class Node {
+        /**
+         * { variable for key }.
+         */
         private Key key;
+        /**
+         * { variable for value }.
+         */
         private Value val;
+        /**
+         * { variable for node next }.
+         */
         private Node next;
-
-        public Node(Key key, Value val, Node next)  {
-            this.key  = key;
-            this.val  = val;
-            this.next = next;
+        /**
+         * Constructs the object.
+         *
+         * @param      key1   The key
+         * @param      val1   The value
+         * @param      next1  The next
+         */
+        Node(final Key key1, final Value val1, final Node next1)  {
+            this.key  = key1;
+            this.val  = val1;
+            this.next = next1;
         }
     }
-
     /**
+     * Constructs the object.
      * Initializes an empty symbol table.
      */
-    public SequentialSearchST() {
+    SequentialSearchST() {
     }
 
     /**
      * Returns the number of key-value pairs in this symbol table.
+     *
+     * Complexity :
+     *              Best Case : O(1)
+     *              Average Case : O(1)
+     *              Worst Case : O(1)
      *
      * @return the number of key-value pairs in this symbol table
      */
     public int size() {
         return n;
     }
-
     /**
-     * Returns true if this symbol table is empty.
+     * Determines if empty.
      *
-     * @return {@code true} if this symbol table is empty;
-     *         {@code false} otherwise
+     * Complexity :
+     *              Best Case : O(1)
+     *              Average Case : O(1)
+     *              Worst Case : O(1)
+     *
+     * @return     True if empty, False otherwise.
      */
     public boolean isEmpty() {
         return size() == 0;
     }
 
     /**
-     * Returns true if this symbol table contains the specified key.
+     * { returns whether the key is present in the table or not }.
      *
-     * @param  key the key
-     * @return {@code true} if this symbol table contains {@code key};
-     *         {@code false} otherwise
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * Complexity :
+     *              Best Case : O(1)
+     *              Average Case : O(1)
+     *              Worst Case : O(1)
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
      */
-    public boolean contains(Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to contains() is null");
+    public boolean contains(final Key key) {
         return get(key) != null;
     }
 
     /**
-     * Returns the value associated with the given key in this symbol table.
+     * { Returns the value associated with the given key. }.
      *
-     * @param  key the key
-     * @return the value associated with the given key if the key is in the symbol table
-     *     and {@code null} if the key is not in the symbol table
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * Complexity :
+     *              Best Case : O(N)
+     *              Average Case : O(N)
+     *              Worst Case : O(N)
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
      */
-    public Value get(Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to get() is null"); 
+    public Value get(final Key key) {
         for (Node x = first; x != null; x = x.next) {
-            if (key.equals(x.key))
+            if (key.equals(x.key)) {
                 return x.val;
+            }
         }
         return null;
     }
 
     /**
-     * Inserts the specified key-value pair into the symbol table, overwriting the old 
-     * value with the new value if the symbol table already contains the specified key.
-     * Deletes the specified key (and its associated value) from this symbol table
-     * if the specified value is {@code null}.
+     * { Inserts the key-value pair into the symbol table,
+     *   overwriting the old value
+     *   with the new value if the key is already in the symbol table.
+     *   If the value is null this effectively deletes the key from
+     *   the symbol table }.
      *
-     * @param  key the key
-     * @param  val the value
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     *   Complexity :
+     *              Best Case : O(logN)
+     *              Average Case : O(logN)
+     *              Worst Case : O(logN)
+     *
+     * @param      key   The key
+     * @param      val   The value
      */
-    public void put(Key key, Value val) {
-        if (key == null) throw new IllegalArgumentException("first argument to put() is null"); 
+    public void put(final Key key, final Value val) {
         if (val == null) {
             delete(key);
             return;
@@ -126,18 +147,37 @@ public class SequentialSearchST<Key, Value> {
     }
 
     /**
-     * Removes the specified key and its associated value from this symbol table     
-     * (if the key is in this symbol table).    
+     * { Removes the key and associated value from the symbol table
+     *   (if the key is in the symbol table) }.
      *
-     * @param  key the key
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     *   Complexity :
+     *              Best Case : O(1)
+     *              Average Case : O(1)
+     *              Worst Case : O(1)
+     *
+     * @param      key   The key
      */
-    public void delete(Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to delete() is null"); 
+    public void delete(final Key key) {
         first = delete(first, key);
     }
-    private Node delete(Node x, Key key) {
-        if (x == null) return null;
+
+    /**
+     * { delete key in linked list beginning at Node x }.
+     *
+     * Complexity :
+     *              Best Case : O(1)
+     *              Average Case : O(1)
+     *              Worst Case : O(1)
+     *
+     * @param      x     { parameter_description }
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private Node delete(final Node x, final Key key) {
+        if (x == null) {
+            return null;
+        }
         if (key.equals(x.key)) {
             n--;
             return x.next;
@@ -145,4 +185,39 @@ public class SequentialSearchST<Key, Value> {
         x.next = delete(x.next, key);
         return x;
     }
+
+    /**
+     * { Returns all keys in the symbol table as an.
+     *   To iterate over all of the keys in the symbol table named,
+     *   use the foreach notation }.
+     *
+     *   Complexity :
+     *              Best Case : O(N)
+     *              Average Case : O(N)
+     *              Worst Case : O(N)
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Iterable<Key> keys()  {
+        Queue<Key> queue = new Queue<Key>();
+        for (Node x = first; x != null; x = x.next) {
+            queue.enqueue(x.key);
+        }
+        return queue;
+    }
+    // /**
+    //  * Unit tests the {@code SequentialSearchST} data type.
+    //  *
+    //  * @param args the command-line arguments
+    //  */
+    // public static void main(String[] args) {
+    //     SequentialSearchST<String, Integer> st =
+    //     new SequentialSearchST<String, Integer>();
+    //     for (int i = 0; !StdIn.isEmpty(); i++) {
+    //         String key = StdIn.readString();
+    //         st.put(key, i);
+    //     }
+    //     for (String s : st.keys())
+    //         StdOut.println(s + " " + st.get(s));
+    // }
 }
