@@ -1,10 +1,9 @@
 import java.util.*;
 class SeparateChainingHashST {
     private static final int INIT_CAPACITY = 4;
-    int n;                                     // number of key-value pairs
-    int m;                                     // hash table size
+    int n;                                // number of key-value pairs
+    int m;                                // hash table size
     SequentialSearchST<String, Integer>[] st;  // array of linked-list symbol tables
-
     /**
      * Initializes an empty symbol table.
      */
@@ -21,8 +20,23 @@ class SeparateChainingHashST {
         st = (SequentialSearchST<String, Integer>[]) new SequentialSearchST[m];
         for (int i = 0; i < m; i++)
             st[i] = new SequentialSearchST<String, Integer>();
-    }
+    } 
 
+    // resize the hash table to have the given number of chains,
+    // // rehashing all of the keys
+    // private void resize(int chains) {
+    //     SeparateChainingHashST<Key, Value> temp = new SeparateChainingHashST<Key, Value>(chains);
+    //     for (int i = 0; i < m; i++) {
+    //         for (Key key : st[i].keys()) {
+    //             temp.put(key, st[i].get(key));
+    //         }
+    //     }
+    //     this.m  = temp.m;
+    //     this.n  = temp.n;
+    //     this.st = temp.st;
+    // }
+
+    // hash value between 0 and m-1
     private int hash(String key) {
         return (key.hashCode() & 0x7fffffff) % m;
     } 
@@ -89,6 +103,10 @@ class SeparateChainingHashST {
             delete(key);
             return;
         }
+
+        // double table size if average length of list >= 10
+        // if (n >= 10*m) resize(2*m);
+
         int i = hash(key);
         if (!st[i].contains(key)) n++;
         st[i].put(key, val);
@@ -107,17 +125,36 @@ class SeparateChainingHashST {
         int i = hash(key);
         if (st[i].contains(key)) n--;
         st[i].delete(key);
-    }
-}
 
+        // halve table size if average length of list <= 2
+        // if (m > INIT_CAPACITY && n <= 2*m) resize(m/2);
+    } 
+
+    // return keys in symbol table as an Iterable
+    // public Iterable<Key> keys() {
+    //     Queue<Key> queue = new Queue<Key>();
+    //     for (int i = 0; i < m; i++) {
+    //         for (Key key : st[i].keys())
+    //             queue.enqueue(key);
+    //     }
+    //     return queue;
+    // }
+    
+}
 class Solution {
     Solution() {
 
     }
+
     public static String check(SeparateChainingHashST st, int n, String[] data) {
         int count = 0;
         for (int i = 0; i < n; i++) {
+            // if (!st.contains(data[i])) {
+   //              return "No";
+            // }
             Integer p = st.get(data[i]);
+            //System.out.println(p);
+            
             if (p == null || p == 0) {
                 return "No";
             }
