@@ -125,7 +125,7 @@ class LinearProbingHashST<Key, Value> {
     			str += keys[i] + ":" + get(keys[i]) + ", ";
     		}
     	}
-    	str.substring(0, str.length() - 2);
+    	str = str.substring(0, str.length() - 2);
     	str += "}";
     	System.out.println(str);
     }
