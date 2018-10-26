@@ -84,6 +84,10 @@ class LinearProbingHashST<Key, Value> {
 
     /**
     * hash function for keys - returns value between 0 and M-1.
+    *
+    * @return    Key type
+    * 
+    * @param    Key   Key type
     */
     private int hash(final Key key) {
         final int num = 11;
@@ -117,16 +121,19 @@ class LinearProbingHashST<Key, Value> {
      * @param      val   The value
      */
     public void put(final Key key, final Value val) {
-        if (key == null) throw new IllegalArgumentException(
-            "first argument to put() is null");
-
+        if (key == null) {
+            throw new IllegalArgumentException(
+                "first argument to put() is null");
+        }
         if (val == null) {
             delete(key);
             return;
         }
 
         // double table size if 50% full
-        if (n >= m / 2) resize(2 * m);
+        if (n >= m / 2) {
+            resize(2 * m);
+        }
 
         int i;
         for (i = hash(key); keys[i] != null; i = (i + 1) % m) {
@@ -149,7 +156,9 @@ class LinearProbingHashST<Key, Value> {
      * @return     { Key type }
      */
     public Value get(final Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to get() is null");
+        if (key == null) {
+            throw new IllegalArgumentException("argument to get() is null");
+        }
         for (int i = hash(key); keys[i] != null; i = (i + 1) % m) {
             if (keys[i].equals(key)) {
                 return vals[i];
@@ -226,7 +235,7 @@ public final class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    public Solution() {
 
     }
     /**

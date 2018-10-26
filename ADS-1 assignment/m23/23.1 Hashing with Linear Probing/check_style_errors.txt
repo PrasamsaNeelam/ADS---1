@@ -1,11 +1,8 @@
 Starting audit...
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:88: Expected @return tag. [JavadocMethod]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:88:32: Expected @param tag for 'key'. [JavadocMethod]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:120: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:129: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:152: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:152: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:199: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:225:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:89: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:90:7: Unused @param tag for 'Key'. [JavadocMethod]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:92:32: Expected @param tag for 'key'. [JavadocMethod]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:208: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:234:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
 Audit done.
-Checkstyle ends with 8 errors.
+Checkstyle ends with 5 errors.
