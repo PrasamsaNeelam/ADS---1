@@ -7,12 +7,22 @@ import java.util.Scanner;
  */
 class LinearProbingHashST<Key, Value> {
     private static final int INIT_CAPACITY = 4;
-
-    private int n;           // number of key-value pairs in the symbol table
-    private int m;           // size of linear probing table
-    private Key[] keys;      // the keys
-    private Value[] vals;    // the values
-
+    /**
+     * Variable for number of key-value pairs in the symbol table.
+     */
+    private int n;
+    /**
+     * Variable for size of linear probing table.
+     */
+    private int m;
+    /**
+     * Variable for the keys.
+     */
+    private Key[] keys;
+    /**
+     * Variable for the values.
+     */
+    private Value[] vals;
 
     /**
      * Initializes an empty symbol table.
@@ -24,22 +34,24 @@ class LinearProbingHashST<Key, Value> {
     /**
      * Initializes an empty symbol table with the specified initial capacity.
      *
-     * @param capacity the initial capacity
+     * @param      capacity  The capacity
      */
-    public LinearProbingHashST(int capacity) {
+    public LinearProbingHashST(final int capacity) {
         m = capacity;
         n = 0;
         keys = (Key[])   new Object[m];
         vals = (Value[]) new Object[m];
     }
+
     /**
-     * to determine the size.
+     * Function to determine the size.
      *
      * @return     { integer value }
      */
     public int size() {
         return n;
     }
+
     /**
      * Determines if empty.
      *
@@ -55,13 +67,13 @@ class LinearProbingHashST<Key, Value> {
      *
      * @return     Key type.
      */
-    public boolean contains(Key key) {
+    public boolean contains(final Key key) {
         if (key == null) throw new IllegalArgumentException("argument to contains() is null");
         return get(key) != null;
     }
 
     // hash function for keys - returns value between 0 and M-1
-    private int hash(Key key) {
+    private int hash(final Key key) {
         return (11 * key.hashCode()) % m;
     }
     /**
@@ -69,7 +81,7 @@ class LinearProbingHashST<Key, Value> {
      *
      * @param      capacity  The capacity
      */
-    private void resize(int capacity) {
+    private void resize(final int capacity) {
         LinearProbingHashST<Key, Value> temp = new LinearProbingHashST<Key, Value>(capacity);
         for (int i = 0; i < m; i++) {
             if (keys[i] != null) {
@@ -86,7 +98,7 @@ class LinearProbingHashST<Key, Value> {
      * @param      key   The key
      * @param      val   The value
      */
-    public void put(Key key, Value val) {
+    public void put(final Key key, final Value val) {
         if (key == null) throw new IllegalArgumentException("first argument to put() is null");
 
         if (val == null) {
@@ -115,7 +127,7 @@ class LinearProbingHashST<Key, Value> {
      *
      * @return     { Key type }
      */
-    public Value get(Key key) {
+    public Value get(final Key key) {
         if (key == null) throw new IllegalArgumentException("argument to get() is null");
         for (int i = hash(key); keys[i] != null; i = (i + 1) % m)
             if (keys[i].equals(key))
@@ -127,7 +139,7 @@ class LinearProbingHashST<Key, Value> {
      *
      * @param      key   The key
      */
-    public void delete(Key key) {
+    public void delete(final Key key) {
         if (key == null) throw new IllegalArgumentException("argument to delete() is null");
         if (!contains(key)) return;
 
@@ -180,7 +192,7 @@ class LinearProbingHashST<Key, Value> {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -192,7 +204,7 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         LinearProbingHashST<String, Integer> st = new LinearProbingHashST<String, Integer>();
         int lines = Integer.parseInt(s.nextLine());
