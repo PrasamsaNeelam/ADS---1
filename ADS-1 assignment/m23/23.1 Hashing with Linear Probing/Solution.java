@@ -146,7 +146,7 @@ public class Solution {
 				st.put(tokens[1], Integer.parseInt(tokens[2]));
 				break;
 				case "get":
-				st.get(tokens[1]);
+				System.out.println(st.get(tokens[1]));
 				break;
 				case "display":
 				st.display();
