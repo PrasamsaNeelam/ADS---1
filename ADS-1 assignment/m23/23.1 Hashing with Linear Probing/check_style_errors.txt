@@ -49,12 +49,13 @@ Starting audit...
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:118:41: '/' is not followed by whitespace. [WhitespaceAround]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:121:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:122:5: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:131: Missing a Javadoc comment. [JavadocType]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:131:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:132:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:135:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:135:33: Parameter args should be final. [FinalParameters]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:137: Line is longer than 80 characters (found 101). [LineLength]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:142:31: 'switch' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:124:19: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:133: Missing a Javadoc comment. [JavadocType]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:133:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:134:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:137:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:137:33: Parameter args should be final. [FinalParameters]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:139: Line is longer than 80 characters (found 101). [LineLength]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:144:31: 'switch' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 57 errors.
+Checkstyle ends with 58 errors.
