@@ -16,7 +16,7 @@ Starting audit...
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:38: Line is longer than 80 characters (found 94). [LineLength]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:43:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:43:22: Parameter key should be final. [FinalParameters]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:44:34: '0x7fffffff' is a magic number. [MagicNumber]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:44:17: '11' is a magic number. [MagicNumber]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:47:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:47:25: Parameter capacity should be final. [FinalParameters]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:48: Line is longer than 80 characters (found 93). [LineLength]
