@@ -1,8 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:89: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:90:7: Unused @param tag for 'Key'. [JavadocMethod]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:92:32: Expected @param tag for 'key'. [JavadocMethod]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:208: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m23\23.1 Hashing with Linear Probing\Solution.java:234:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
 Audit done.
-Checkstyle ends with 5 errors.

@@ -86,8 +86,8 @@ class LinearProbingHashST<Key, Value> {
     * hash function for keys - returns value between 0 and M-1.
     *
     * @return    Key type
-    * 
-    * @param    Key   Key type
+    *
+    * @param    key   Key type
     */
     private int hash(final Key key) {
         final int num = 11;
@@ -205,7 +205,9 @@ class LinearProbingHashST<Key, Value> {
         }
         n--;
         // halves size of array if it's 12.5% full or less
-        if (n > 0 && n <= m / no) resize(m / 2);
+        if (n > 0 && n <= m / no) {
+            resize(m / 2);
+        }
     }
     /**
      * Display function.
@@ -235,7 +237,7 @@ public final class Solution {
     /**
      * Constructs the object.
      */
-    public Solution() {
+    private Solution() {
 
     }
     /**
