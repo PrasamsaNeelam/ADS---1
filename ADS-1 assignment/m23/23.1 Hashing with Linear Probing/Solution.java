@@ -122,7 +122,7 @@ class LinearProbingHashST<Key, Value> {
     	String str = "{";
     	for (int i = 0; i < m; i++) {
     		if(keys[i] != null) {
-    			str += keys[i] + ":" + get(keys[i]) + ",";
+    			str += keys[i] + ":" + get(keys[i]) + ", ";
     		}
     	}
     	str.substring(0, str.length() - 2);
