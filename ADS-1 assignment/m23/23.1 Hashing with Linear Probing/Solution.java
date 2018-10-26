@@ -120,8 +120,8 @@ class LinearProbingHashST<Key, Value> {
     }
     public void display() {
     	String str = "{";
-    	for (int i = 0; i < m - 1; i++) {
-    		str += keys[i] + ":" + vals[i] + ",";
+    	for (int i = 0; i < m; i++) {
+    		str += keys[i] + ":" + get(keys[i]) + ",";
     	}
     	str.substring(0, str.length() - 2);
     	str += "}";
