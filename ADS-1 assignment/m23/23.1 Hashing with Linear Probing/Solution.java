@@ -6,6 +6,9 @@ import java.util.Scanner;
  * @param      <Value>  The value
  */
 class LinearProbingHashST<Key, Value> {
+    /**
+     * Variable for capacity.
+     */
     private static final int INIT_CAPACITY = 4;
     /**
      * Variable for number of key-value pairs in the symbol table.
@@ -27,7 +30,7 @@ class LinearProbingHashST<Key, Value> {
     /**
      * Initializes an empty symbol table.
      */
-    public LinearProbingHashST() {
+    LinearProbingHashST() {
         this(INIT_CAPACITY);
     }
 
@@ -36,24 +39,26 @@ class LinearProbingHashST<Key, Value> {
      *
      * @param      capacity  The capacity
      */
-    public LinearProbingHashST(final int capacity) {
+    LinearProbingHashST(final int capacity) {
         m = capacity;
         n = 0;
         keys = (Key[])   new Object[m];
         vals = (Value[]) new Object[m];
     }
-
     /**
      * Function to determine the size.
+     * 
+     * Time complexity is O(1).
      *
      * @return     { integer value }
      */
     public int size() {
         return n;
     }
-
     /**
      * Determines if empty.
+     * 
+     * Time complexity is O(1).
      *
      * @return     True if empty, False otherwise.
      */
@@ -62,22 +67,30 @@ class LinearProbingHashST<Key, Value> {
     }
     /**
      * checks whether the key is present.
+     * 
+     * Time complexity is O(1).
      *
      * @param      key   The key
      *
      * @return     Key type.
      */
     public boolean contains(final Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to contains() is null");
+        if (key == null) {
+            throw new IllegalArgumentException
+            ("argument to contains() is null");
+        }
         return get(key) != null;
     }
 
-    // hash function for keys - returns value between 0 and M-1
+    // hash function for keys - returns value between 0 and M-1.
     private int hash(final Key key) {
-        return (11 * key.hashCode()) % m;
+        final int num = 11;
+        return (num * key.hashCode()) % m;
     }
     /**
-     * resize function
+     * resize function.
+     * 
+     * Time complexity is O(N).
      *
      * @param      capacity  The capacity
      */
@@ -94,6 +107,8 @@ class LinearProbingHashST<Key, Value> {
     }
     /**
      * Function to insert key-value pair.
+     * 
+     * Time complexity is O(log(N)).
      *
      * @param      key   The key
      * @param      val   The value
@@ -123,6 +138,8 @@ class LinearProbingHashST<Key, Value> {
     /**
      * Function to get value for key.
      *
+     * Time complexity is O(log(N))
+     *
      * @param      key   The key
      *
      * @return     { Key type }
@@ -136,6 +153,8 @@ class LinearProbingHashST<Key, Value> {
     }
     /**
      * Function to delete the key-value pair.
+     * 
+     * Time complexity is O(log(N))
      *
      * @param      key   The key
      */
@@ -172,6 +191,8 @@ class LinearProbingHashST<Key, Value> {
     }
     /**
      * Display function.
+     *
+     * Time complexity is O(N).
      */
     public void display() {
         if (size() == 0) {
