@@ -1,4 +1,10 @@
 import java.util.Scanner;
+/**
+ * Class for linear probing hash st.
+ *
+ * @param      <Key>    The key
+ * @param      <Value>  The value
+ */
 class LinearProbingHashST<Key, Value> {
     private static final int INIT_CAPACITY = 4;
 
@@ -26,15 +32,30 @@ class LinearProbingHashST<Key, Value> {
         keys = (Key[])   new Object[m];
         vals = (Value[]) new Object[m];
     }
+    /**
+     * to determine the size.
+     *
+     * @return     { integer value }
+     */
     public int size() {
         return n;
     }
-
+    /**
+     * Determines if empty.
+     *
+     * @return     True if empty, False otherwise.
+     */
     public boolean isEmpty() {
         return size() == 0;
     }
-
-     public boolean contains(Key key) {
+    /**
+     * checks whether the key is present.
+     *
+     * @param      key   The key
+     *
+     * @return     Key type.
+     */
+    public boolean contains(Key key) {
         if (key == null) throw new IllegalArgumentException("argument to contains() is null");
         return get(key) != null;
     }
@@ -43,7 +64,11 @@ class LinearProbingHashST<Key, Value> {
     private int hash(Key key) {
         return (11 * key.hashCode()) % m;
     }
-
+    /**
+     * resize function
+     *
+     * @param      capacity  The capacity
+     */
     private void resize(int capacity) {
         LinearProbingHashST<Key, Value> temp = new LinearProbingHashST<Key, Value>(capacity);
         for (int i = 0; i < m; i++) {
@@ -55,7 +80,12 @@ class LinearProbingHashST<Key, Value> {
         vals = temp.vals;
         m    = temp.m;
     }
-
+    /**
+     * Function to insert key-value pair.
+     *
+     * @param      key   The key
+     * @param      val   The value
+     */
     public void put(Key key, Value val) {
         if (key == null) throw new IllegalArgumentException("first argument to put() is null");
 
@@ -65,7 +95,7 @@ class LinearProbingHashST<Key, Value> {
         }
 
         // double table size if 50% full
-        if (n >= m/2) resize(2*m);
+        if (n >= m / 2) resize(2 * m);
 
         int i;
         for (i = hash(key); keys[i] != null; i = (i + 1) % m) {
@@ -78,7 +108,13 @@ class LinearProbingHashST<Key, Value> {
         vals[i] = val;
         n++;
     }
-
+    /**
+     * Function to get value for key.
+     *
+     * @param      key   The key
+     *
+     * @return     { Key type }
+     */
     public Value get(Key key) {
         if (key == null) throw new IllegalArgumentException("argument to get() is null");
         for (int i = hash(key); keys[i] != null; i = (i + 1) % m)
@@ -86,7 +122,11 @@ class LinearProbingHashST<Key, Value> {
                 return vals[i];
         return null;
     }
-
+    /**
+     * Function to delete the key-value pair.
+     *
+     * @param      key   The key
+     */
     public void delete(Key key) {
         if (key == null) throw new IllegalArgumentException("argument to delete() is null");
         if (!contains(key)) return;
@@ -115,52 +155,66 @@ class LinearProbingHashST<Key, Value> {
         }
         n--;
         // halves size of array if it's 12.5% full or less
-        if (n > 0 && n <= m/8) resize(m/2);
+        if (n > 0 && n <= m / 8) resize(m / 2);
         // assert check();
     }
+    /**
+     * Display function.
+     */
     public void display() {
-    	if (size() == 0) {
-    		System.out.println("{}");
-    		return;
-    	}
-    	String str = "{";
-    	for (int i = 0; i < m; i++) {
-    		if(keys[i] != null) {
-    			str += keys[i] + ":" + get(keys[i]) + ", ";
-    		}
-    	}
-    	str = str.substring(0, str.length() - 2);
-    	str += "}";
-    	System.out.println(str);
+        if (size() == 0) {
+            System.out.println("{}");
+            return;
+        }
+        String str = "{";
+        for (int i = 0; i < m; i++) {
+            if (keys[i] != null) {
+                str += keys[i] + ":" + get(keys[i]) + ", ";
+            }
+        }
+        str = str.substring(0, str.length() - 2);
+        str += "}";
+        System.out.println(str);
     }
 }
+/**
+ * Class for solution.
+ */
 public class Solution {
-	Solution() {
+    /**
+     * Constructs the object.
+     */
+    Solution() {
 
-	}
-	public static void main(String[] args) {
-		Scanner s = new Scanner(System.in);
-		LinearProbingHashST<String, Integer> st = new LinearProbingHashST<String, Integer>();
-		int lines = Integer.parseInt(s.nextLine());
-		while (s.hasNext()) {
-			String data = s.nextLine();
-			String[] tokens = data.split(" ");
-			switch(tokens[0]) {
-				case "put":
-				st.put(tokens[1], Integer.parseInt(tokens[2]));
-				break;
-				case "get":
-				System.out.println(st.get(tokens[1]));
-				break;
-				case "display":
-				st.display();
-				break;
-				case "delete":
-				st.delete(tokens[1]);
-				break;
-				default:
-				break;
-			}
-		}
-	}
+    }
+    /**
+     * Main function to drive the program.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        LinearProbingHashST<String, Integer> st = new LinearProbingHashST<String, Integer>();
+        int lines = Integer.parseInt(s.nextLine());
+        while (s.hasNext()) {
+            String data = s.nextLine();
+            String[] tokens = data.split(" ");
+            switch (tokens[0]) {
+            case "put":
+                st.put(tokens[1], Integer.parseInt(tokens[2]));
+                break;
+            case "get":
+                System.out.println(st.get(tokens[1]));
+                break;
+            case "display":
+                st.display();
+                break;
+            case "delete":
+                st.delete(tokens[1]);
+                break;
+            default:
+                break;
+            }
+        }
+    }
 }
