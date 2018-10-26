@@ -119,6 +119,9 @@ class LinearProbingHashST<Key, Value> {
         // assert check();
     }
     public void display() {
+    	if (size() == 0) {
+    		System.out.println("{}");
+    	}
     	String str = "{";
     	for (int i = 0; i < m; i++) {
     		if(keys[i] != null) {
