@@ -47,7 +47,7 @@ class LinearProbingHashST<Key, Value> {
     }
     /**
      * Function to determine the size.
-     * 
+     *
      * Time complexity is O(1).
      *
      * @return     { integer value }
@@ -57,7 +57,7 @@ class LinearProbingHashST<Key, Value> {
     }
     /**
      * Determines if empty.
-     * 
+     *
      * Time complexity is O(1).
      *
      * @return     True if empty, False otherwise.
@@ -67,7 +67,7 @@ class LinearProbingHashST<Key, Value> {
     }
     /**
      * checks whether the key is present.
-     * 
+     *
      * Time complexity is O(1).
      *
      * @param      key   The key
@@ -76,26 +76,29 @@ class LinearProbingHashST<Key, Value> {
      */
     public boolean contains(final Key key) {
         if (key == null) {
-            throw new IllegalArgumentException
-            ("argument to contains() is null");
+            throw new IllegalArgumentException(
+                "argument to contains() is null");
         }
         return get(key) != null;
     }
 
-    // hash function for keys - returns value between 0 and M-1.
+    /**
+    * hash function for keys - returns value between 0 and M-1.
+    */
     private int hash(final Key key) {
         final int num = 11;
         return (num * key.hashCode()) % m;
     }
     /**
      * resize function.
-     * 
+     *
      * Time complexity is O(N).
      *
      * @param      capacity  The capacity
      */
     private void resize(final int capacity) {
-        LinearProbingHashST<Key, Value> temp = new LinearProbingHashST<Key, Value>(capacity);
+        LinearProbingHashST<Key, Value> temp =
+            new LinearProbingHashST<Key, Value>(capacity);
         for (int i = 0; i < m; i++) {
             if (keys[i] != null) {
                 temp.put(keys[i], vals[i]);
@@ -107,14 +110,15 @@ class LinearProbingHashST<Key, Value> {
     }
     /**
      * Function to insert key-value pair.
-     * 
+     *
      * Time complexity is O(log(N)).
      *
      * @param      key   The key
      * @param      val   The value
      */
     public void put(final Key key, final Value val) {
-        if (key == null) throw new IllegalArgumentException("first argument to put() is null");
+        if (key == null) throw new IllegalArgumentException(
+            "first argument to put() is null");
 
         if (val == null) {
             delete(key);
@@ -146,22 +150,28 @@ class LinearProbingHashST<Key, Value> {
      */
     public Value get(final Key key) {
         if (key == null) throw new IllegalArgumentException("argument to get() is null");
-        for (int i = hash(key); keys[i] != null; i = (i + 1) % m)
-            if (keys[i].equals(key))
+        for (int i = hash(key); keys[i] != null; i = (i + 1) % m) {
+            if (keys[i].equals(key)) {
                 return vals[i];
+            }
+        }
         return null;
     }
     /**
      * Function to delete the key-value pair.
-     * 
+     *
      * Time complexity is O(log(N))
      *
      * @param      key   The key
      */
     public void delete(final Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to delete() is null");
-        if (!contains(key)) return;
-
+        final int no = 8;
+        if (key == null) {
+            throw new IllegalArgumentException("argument to delete() is null");
+        }
+        if (!contains(key)) {
+            return;
+        }
         // find position i of key
         int i = hash(key);
         while (!key.equals(keys[i])) {
@@ -186,8 +196,7 @@ class LinearProbingHashST<Key, Value> {
         }
         n--;
         // halves size of array if it's 12.5% full or less
-        if (n > 0 && n <= m / 8) resize(m / 2);
-        // assert check();
+        if (n > 0 && n <= m / no) resize(m / 2);
     }
     /**
      * Display function.
@@ -227,7 +236,8 @@ public final class Solution {
      */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
-        LinearProbingHashST<String, Integer> st = new LinearProbingHashST<String, Integer>();
+        LinearProbingHashST<String, Integer> st =
+        new LinearProbingHashST<String, Integer>();
         int lines = Integer.parseInt(s.nextLine());
         while (s.hasNext()) {
             String data = s.nextLine();
