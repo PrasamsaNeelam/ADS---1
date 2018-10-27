@@ -330,14 +330,14 @@ public class Solution {
             String[] tokens = data.split(" ");
             switch (tokens[2]) {
                 case "1":
-                String roll = tokens[0];
+                String roll = tokens[1];
                 if (st.contains(roll)) {
                     System.out.println(st.get(roll).getName());
                 }
                 break;
 
                 case "2":
-                String rollno = tokens[0];
+                String rollno = tokens[1];
                 if (st.contains(rollno)) {
                     System.out.println(st.get(rollno).getName());
                 }
