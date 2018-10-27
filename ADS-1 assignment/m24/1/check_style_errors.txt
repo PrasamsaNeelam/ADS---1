@@ -1,0 +1,13 @@
+Starting audit...
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:30:13: Parameter rollno should be final. [FinalParameters]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:30:28: Parameter name1 should be final. [FinalParameters]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:30:42: Parameter marks1 should be final. [FinalParameters]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:35:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:35:13: Parameter rollno should be final. [FinalParameters]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:305: Class Solution should be declared as final. [FinalClass]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:317:29: Parameter args should be final. [FinalParameters]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:319: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:324: Line is longer than 80 characters (found 91). [LineLength]
+Audit done.
+Checkstyle ends with 10 errors.
