@@ -1,4 +1,4 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 Clark
 Rivest
@@ -9,8 +9,14 @@ Alice
 Bob
 John
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
-	at Solution.main(Solution.java:308)
+Clark
+Rivest
+Abegg
+Fred
+Wayne
+Alice
+Bob
+John
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -28,8 +34,19 @@ Expected Output:
 45.4
 99.3
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
-	at Solution.main(Solution.java:308)
+Knuth
+Bob
+Clark
+Rivest
+Abegg
+Access
+Wayne
+Alice
+John
+Abegg
+Hank
+Keith
+Jeannette Caines
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -51,8 +68,19 @@ Student doesn't exists...
 Student doesn't exists...
 Student doesn't exists...
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
-	at Solution.main(Solution.java:308)
+Knuth
+Bob
+Clark
+Rivest
+Abegg
+Access
+Wayne
+Alice
+John
+Abegg
+Hank
+Deborah Cadbury
+Jeannette Caines
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -557,6 +585,501 @@ Robert Macfarlane
 John Hale
 53.79
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
-	at Solution.main(Solution.java:308)
+John Hale
+Michael Hale
+Steph Jagger
+Bradley Jackson
+Shannon Hale
+Madhur Jaffrey
+Ann-Marie MacDonald
+Ruth H. Jacobs
+Mary MacCracken
+Michael Hale
+Taylor Hackford
+Richard Jacoby
+Kady MacDonald Denton
+Kate Jacoby
+Charles B. Macdonald
+Laura Holmes Haddad
+David H. Hackworth
+Debra W. Haffner
+John Jacobs
+Richard Jackson
+Catherine Macaulay
+M MacCallum
+Ellie Macdonald
+Sophie Jaff
+Auston Habershaw
+Kathryn Jacobi
+Brad Haddin
+Gerry Hadden
+Kathryn Ma
+Charlie Haas
+T. T. Macan
+Simon Jacobson
+Carla Jablonski
+Stuart MacBride
+Keith Habersberger
+Meredith L. Jacobs
+Kady MacDonald Denton
+Sammy Hagar
+Tony Macaulay
+Ellen Jackson
+Taylor Hackford
+Michael Hale
+Taylor Hackford
+Laura Holmes Haddad
+Katharina Hagena
+Marilyn Hagerty
+Gracie MacGregor
+David Halberstam
+Michael Haag
+Norm MacDonald
+Chuck Hagel
+Gene Hackman
+Sophie Jaff
+Taylor Hackford
+Jenna Bush Hager
+Katharina Hagena
+Keach Hagey
+Colin Jack
+Carla Jablonski
+Margaret Peterson Haddix
+Bethany Hagen
+Aparna Jain
+Pamela Haag
+H3CZ
+Carrington MacDuffie
+Olivia Mace
+Alan Jacobs
+Alex James
+Marilyn Hagerty
+Kristin Halbrook
+Debra W. Haffner
+Ruth H. Jacobs
+Tracey Jackson
+Steve Hagen
+Kinley MacGregor
+Yossi Klein Halevi
+Nafisa Haji
+David Haig
+Mary Downing Hahn
+Roger Lea MacBride
+Steph Jagger
+Ian Jackman
+Peter Jackson
+Al Jaffee
+Guru Jagat
+William Hague
+Melissa Jacobs
+Carrington MacDuffie
+Nasim Marie Jafry
+Charles B. Macdonald
+Jane MacDougall
+Tony Macaulay
+Jeff MacGregor
+Cynthia Jabar
+Jerome A. Jackson
+Carla Hall
+Michael Hale
+James Macdonald
+A.N.D Haksar
+Ellen Jackson
+David Jacobs
+John Hornor Jacobs
+Ian Jackman
+Ellen Jackson
+Ann-Marie MacDonald
+Jane MacDougall
+Mark Haddon
+Amanda Hall
+Shaili Jain M.D.
+W. G. Hale
+Peter Jackson
+Dana C. Jack
+Catherine Macaulay
+John Hornor Jacobs
+Ann-Marie MacDonald
+Namita Jain
+David Halberstam
+Richard Jackson
+David Halberstam
+Kate Jacoby
+Peter Jackson
+Kellie Hailes
+Andrew Macdonald
+Howard Jacobson
+Bernie Mac
+Bernie Mac
+Amanda Hall
+Kate Jacoby
+Al Jaffee
+Tessa Hadley
+A.N.D Haksar
+Mary MacCracken
+Nasim Marie Jafry
+Steph Jagger
+Richard Jackson
+Bradley Jackson
+Michele Jaffe
+Namita Jain
+Tracey Jackson
+Tony Macaulay
+Jennifer Haigh
+Olivia Mace
+Shane Jacobson
+Don Hagen
+Ian Jackman
+Thomas Hackett
+Thomas Hackett
+Merle Haggard
+Mick Jackson
+Sarah Jacoby
+Madhur Jaffrey
+Vicky Hales-Dutton
+Philip MacDonald
+Derek Jacobi
+Nafisa Haji
+Katharina Hagena
+Nasim Marie Jafry
+M MacCallum
+Jeannette Haien
+Betty MacDonald
+Jessie Haas
+Andrew Macdonald
+Lynn F. Jacobs
+Robert Jackson
+Al Jaffee
+James Macdonald
+Richard Jacoby
+Daniel Hahn
+John W. Jacobs M.D.
+Kristin Halbrook
+M MacCallum
+Roger O.M.D. Jahnke
+Tracy Hafen
+William Hague
+Taylor Hackford
+Debra W. Haffner
+Al Jaffee
+Heather Hach
+John Hale
+Kathleen Hale
+Terrence J
+Kate Jacoby
+Andrew Jacobson
+Julie Mac
+Elaine Hall
+Kinley MacGregor
+Kennell Jackson
+Namita Jain
+Keach Hagey
+Heather Hach
+Michael Hale
+Dana C. Jack
+Tracy Hafen
+Jerome A. Jackson
+John Hale
+Mary MacCracken
+Terrence J
+Namita Jain
+Kevin MacAllister
+Simon Jacobson
+Bonnie MacBird
+Sheila Hale
+Mary Curran Hackett
+Ruby Jackson
+Sara MacDonald
+Andrew Macdonald
+Tony Macaulay
+John W. Jacobs M.D.
+Tracey Jackson
+Heather Hach
+Gene Hackman
+James B. Maas
+Kennell Jackson
+Rawi Hage
+Mary MacCracken
+Carla Hall
+Nasim Marie Jafry
+Sophie Jaff
+Bonnie MacBird
+Joie Jager-Hyman
+Emma Jackson
+Peter Jackson
+Jeremy Jackson
+Kathryn Ma
+W. G. Hale
+Olivia Mace
+David H. Hackworth
+Stuart B. MacBride
+Rachel Jacobs
+Ruth H. Jacobs
+Dana Jacobi
+Bonnie MacBird
+Al Jaffee
+M MacCallum
+Lynn F. Jacobs
+Carrington MacDuffie
+Annie Maccoby
+Cynthia Jabar
+Albert Jack
+William Haefeli
+Michael Haag
+Marylin Hafner
+Annie Maccoby
+Myla Jackson
+Baby Halder
+James Macdonald
+Merle Haggard
+Ian Jackman
+Gene Hackman
+Betty MacDonald
+Gracie MacGregor
+Marilyn Hagerty
+Araminta Hall
+Mark Haddon
+David Jacobs
+Libby Jackson
+Kevin MacAllister
+Keach Hagey
+Araminta Hall
+Gene Hackman
+Allan Hall
+Marilyn Hagerty
+Bethany Hagen
+Sara MacDonald
+Pamela Haag
+Heather Hach
+Ian Jackman
+Richard Mabey
+Charlie Haas
+Kathleen Hale
+Laura Holmes Haddad
+Jessie Haas
+Philip MacDonald
+David Haig
+Peter Haining
+Bradley Jackson
+Robert Jackson
+John Jacobs
+Shvetha Jaishankar
+Gene Hackman
+Laura Holmes Haddad
+Chuck Hagel
+Baby Halder
+Mary MacCracken
+Nate Jackson
+Michael Hale
+William Hague
+M MacCallum
+Kinley MacGregor
+Ruby Jackson
+John Hale
+Saskia Maarleveld
+Michael Hale
+Kate Jacoby
+Tracey Jackson
+Don Hagen
+Kinley MacGregor
+Howard Jacobson
+Auston Habershaw
+Bruce Hale
+Laura Holmes Haddad
+A.N.D Haksar
+Rawi Hage
+Jo Jackson King
+Cynthia Jabar
+Richard Jacoby
+Andrew Macdonald
+Daniel Hahn
+Rachel Jacobs
+David Macfarlane
+Kate Jacoby
+Korey Jackson
+Melissa Jacobs
+James Graham Hale
+Vicky Hales-Dutton
+Yossi Klein Halevi
+Laura Holmes Haddad
+Margaret Peterson Haddix
+Chuck Hagel
+Philip MacDonald
+Taylor Hackford
+Simcha Jacobovici
+Fiona MacDonald
+Kristin Halbrook
+Ellen Jackson
+Catherine Macaulay
+Peter Haining
+Annie Maccoby
+David Macfarlane
+Bernie Mac
+Margaret Read MacDonald
+Meredith Jaeger
+Rawi Hage
+Al Jaffee
+Norm MacDonald
+William Haefeli
+Ann-Marie MacDonald
+Lynn F. Jacobs
+Ellie Macdonald
+Michael Hague
+Madhur Jaffrey
+Ruby Jackson
+David Haig
+Cynthia Jabar
+Ellen Jackson
+Kevin MacAllister
+Jennifer Haigh
+Steve Jackson
+Peter Maas
+Peter Maas
+Kevin MacAllister
+Shannon Hale
+Katharina Hagena
+Kathryn Ma
+Shvetha Jaishankar
+Margaret Read MacDonald
+Carla Jablonski
+Dana C. Jack
+Kate Jacoby
+Sylvie Haisman
+Tony Macaulay
+Saskia Maarleveld
+Kellie Hailes
+Steve Hagen
+H. JACKSON
+John Hale
+Korey Jackson
+Margaret Peterson Haddix
+Betty Halbreich
+Marilyn Hagerty
+Dana C. Jack
+Elaine Hall
+Bonnie MacBird
+A.N.D Haksar
+Dana C. Jack
+John Hornor Jacobs
+William Hague
+Marilyn Hagerty
+Steph Jagger
+Simon Jacobson
+Tessa Hadley
+David Haig
+Myla Jackson
+David Halberstam
+Guru Jagat
+June Hadley
+Catherine Macaulay
+Jeannette Haien
+David Hagedorn
+Sophie Jaff
+Kathryn Miller Haines
+J.D. Jackson
+Emma Jackson
+Namita Jain
+Al Jaffee
+Kathryn Miller Haines
+Shane Jacobson
+Baby Halder
+Adele Jacques
+Baby Halder
+Richard Jacoby
+Katharina Hagena
+Shaili Jain M.D.
+Colin Jack
+Kevin MacAllister
+Andrew Jacobson
+Meredith Jaeger
+Carla Hall
+Magnus MacFarlane-Barrow
+Carla Jablonski
+Tracey Jackson
+Sylvie Haisman
+Shelley Jackson
+Richard Jacoby
+Norm MacDonald
+Gildart Jackson
+Anthony Haden-Guest
+David Halberstam
+Kellie Hailes
+Nathan Hale
+Peter Haining
+James B. Maas
+Kady MacDonald Denton
+Catherine Macaulay
+Fiona MacDonald
+Kate Jacoby
+Roger O.M.D. Jahnke
+Sophie Jaff
+Simon Jacobson
+Colin Jack
+David Macfarlane
+James Macdonald
+Richard Mabey
+Libby Jackson
+Emma Jackson
+Madhur Jaffrey
+Bethany Hagen
+David Haig
+Magnus MacFarlane-Barrow
+Jane MacDougall
+Bonnie MacBird
+Philip MacDonald
+Heather Hach
+Tessa Hadley
+Chuck Hagel
+Mary MacCracken
+Heather Hach
+John W. Jacobs
+David Hagedorn
+Todd Haberkorn
+Mary Curran Hackett
+Catherine Macaulay
+Kinley MacGregor
+Emily Hainsworth
+Daniel Hahn
+Laura Holmes Haddad
+Joshilyn Jackson
+Kristin Halbrook
+Emily Hainsworth
+Kathryn Ma
+Ellie Macdonald
+John Hale
+Elaine Hall
+A.N.D Haksar
+Michele Jaffe
+Nasim Marie Jafry
+Richard Jacoby
+Keach Hagey
+Robert Jackson
+Tiffany D. Jackson
+Vicky Hales-Dutton
+Virginia Macgregor
+Kristin Hahn
+Ellen Jackson
+Richard Mabey
+Derek Jacobi
+Jerome A. Jackson
+Mary Curran Hackett
+Tiffany D. Jackson
+George Jacobs
+David Halberstam
+Bradley Jackson
+Carla Hall
+Kathleen Hale
+Kathryn Ma
+William Hague
+Daniel Hahn
+T. T. Macan
+Meredith L. Jacobs
+H. JACKSON
+Fiona MacDonald
+Tony Macaulay
+H. JACKSON
+Elaine Hall
+Robert Macfarlane
+John Hale
+Gracie MacGregor
 ----------------------------------------

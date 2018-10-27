@@ -5,5 +5,6 @@ Starting audit...
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:288: Class Solution should be declared as final. [FinalClass]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:300:29: Parameter args should be final. [FinalParameters]
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:302: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:311:48: Empty statement. [EmptyStatement]
 Audit done.
-Checkstyle ends with 6 errors.
+Checkstyle ends with 7 errors.

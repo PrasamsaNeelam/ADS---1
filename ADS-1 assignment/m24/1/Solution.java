@@ -300,7 +300,7 @@ public class Solution {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         SeparateChainingHashST<String, Student> st = new SeparateChainingHashST<>();
-        int n = s.nextInt();
+        int n = Integer.parseInt(s.nextLine());
         Student std = null;
         for (int i = 0; i < n; i++) {
             String data = s.nextLine();
@@ -308,7 +308,7 @@ public class Solution {
             std = new Student(tokens[1], Double.parseDouble(tokens[2]));
             st.put(tokens[0], std);
         }
-        int m = s.nextInt();
+        int m = Integer.parseInt(s.nextLine());;
         for (int i = 0; i < m; i++) {
             String data = s.nextLine();
             String[] tokens = data.split(" ");
