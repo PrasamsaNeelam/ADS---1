@@ -313,10 +313,11 @@ public class Solution {
         Scanner s = new Scanner(System.in);
         SeparateChainingHashST<String, Student> st = new SeparateChainingHashST<>();
         int n = s.nextInt();
+        Student std = null;
         for (int i = 0; i < n; i++) {
             String data = s.nextLine();
             String[] tokens = data.split(",");
-            Student std = new Student(tokens[1], Double.parseDouble(tokens[2]));
+            std = new Student(tokens[1], Double.parseDouble(tokens[2]));
             st.put(tokens[0], std);
         }
         int m = s.nextInt();
