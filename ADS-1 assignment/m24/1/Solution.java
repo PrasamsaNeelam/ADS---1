@@ -22,7 +22,7 @@ class Student {
      * @param      name1   The name 1
      * @param      marks1  The marks 1
      */
-    Student(String name1, double marks1) {
+    Student(final String name1, final double marks1) {
         this.name = name1;
         this.marks = marks1;
     }
@@ -285,7 +285,7 @@ class SeparateChainingHashST<Key, Value> {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -297,9 +297,10 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
-        SeparateChainingHashST<String, Student> st = new SeparateChainingHashST<>();
+        SeparateChainingHashST<String, Student> st = new
+        SeparateChainingHashST<>();
         int n = Integer.parseInt(s.nextLine());
         Student std = null;
         for (int i = 0; i < n; i++) {
@@ -308,12 +309,12 @@ public class Solution {
             std = new Student(tokens[1], Double.parseDouble(tokens[2]));
             st.put(tokens[0], std);
         }
-        int m = Integer.parseInt(s.nextLine());;
+        int m = Integer.parseInt(s.nextLine());
         for (int i = 0; i < m; i++) {
             String data = s.nextLine();
             String[] tokens = data.split(" ");
             switch (tokens[2]) {
-                case "1":
+            case "1":
                 String roll = tokens[1];
                 if (st.contains(roll)) {
                     System.out.println(st.get(roll).getName());
@@ -322,7 +323,7 @@ public class Solution {
                 }
                 break;
 
-                case "2":
+            case "2":
                 String rollno = tokens[1];
                 if (st.contains(rollno)) {
                     System.out.println(st.get(rollno).getMarks());
@@ -330,7 +331,7 @@ public class Solution {
                     System.out.println("Student doesn't exists...");
                 }
                 break;
-                default:
+            default:
                 break;
             }
         }
