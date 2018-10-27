@@ -317,6 +317,8 @@ public class Solution {
                 String roll = tokens[1];
                 if (st.contains(roll)) {
                     System.out.println(st.get(roll).getName());
+                } else {
+                    System.out.println("Student doesn't exists...");
                 }
                 break;
 
@@ -324,6 +326,8 @@ public class Solution {
                 String rollno = tokens[1];
                 if (st.contains(rollno)) {
                     System.out.println(st.get(rollno).getMarks());
+                } else {
+                    System.out.println("Student doesn't exists...");
                 }
                 break;
                 default:
