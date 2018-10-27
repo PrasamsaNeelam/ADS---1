@@ -22,7 +22,7 @@ class Student {
      * @param      name1   The name 1
      * @param      marks1  The marks 1
      */
-    Student(String name1, Double marks1) {
+    Student(String name1, double marks1) {
         this.name = name1;
         this.marks = marks1;
     }
@@ -39,7 +39,7 @@ class Student {
      *
      * @return     The marks.
      */
-    public Double getMarks() {
+    public double getMarks() {
         return this.marks;
     }
 }
