@@ -9,17 +9,13 @@ import java.util.Scanner;
  */
 class Student {
     /**
-     * Variable for student roll number.
-     */
-    private String roll;
-    /**
      * Variable for student's name.
      */
     private String name;
     /**
      * Variable for student marks.
      */
-    private Double marks;
+    private double marks;
     /**
      * Constructs the object.
      *
@@ -29,14 +25,6 @@ class Student {
     Student(String name1, Double marks1) {
         this.name = name1;
         this.marks = marks1;
-    }
-    /**
-     * Gets the roll.
-     *
-     * @return     The roll.
-     */
-    public String getRoll() {
-        return this.roll;
     }
     /**
      * Gets the name.

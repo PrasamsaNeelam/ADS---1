@@ -1,9 +1,9 @@
 Starting audit...
 [ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:29:13: Parameter name1 should be final. [FinalParameters]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:29:27: Parameter marks1 should be final. [FinalParameters]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:300: Class Solution should be declared as final. [FinalClass]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:312:29: Parameter args should be final. [FinalParameters]
-[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:314: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:25:13: Parameter name1 should be final. [FinalParameters]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:25:27: Parameter marks1 should be final. [FinalParameters]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:288: Class Solution should be declared as final. [FinalClass]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:300:29: Parameter args should be final. [FinalParameters]
+[ERROR] C:\Users\prasamsa\Desktop\ADS---1\ADS-1 assignment\m24\1\Solution.java:302: Line is longer than 80 characters (found 84). [LineLength]
 Audit done.
 Checkstyle ends with 6 errors.
