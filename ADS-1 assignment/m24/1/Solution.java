@@ -323,7 +323,7 @@ public class Solution {
                 case "2":
                 String rollno = tokens[1];
                 if (st.contains(rollno)) {
-                    System.out.println(st.get(rollno).getName());
+                    System.out.println(st.get(rollno).getMarks());
                 }
                 break;
                 default:
