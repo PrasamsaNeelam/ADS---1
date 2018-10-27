@@ -23,17 +23,12 @@ class Student {
     /**
      * Constructs the object.
      *
-     * @param      rollno  The rollno
      * @param      name1   The name 1
      * @param      marks1  The marks 1
      */
-    Student(String rollno, String name1, Double marks1) {
-        this.roll = rollno;
+    Student(String name1, Double marks1) {
         this.name = name1;
         this.marks = marks1;
-    }
-    Student(String rollno) {
-        this.roll = rollno;
     }
     /**
      * Gets the roll.
@@ -321,7 +316,7 @@ public class Solution {
         for (int i = 0; i < n; i++) {
             String data = s.nextLine();
             String[] tokens = data.split(",");
-            Student std = new Student(tokens[0], tokens[1], Double.parseDouble(tokens[2]));
+            Student std = new Student(tokens[1], Double.parseDouble(tokens[2]));
             st.put(tokens[0], std);
         }
         int m = s.nextInt();
